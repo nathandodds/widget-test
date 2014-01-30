@@ -18,6 +18,9 @@ STRUCTURE
 @import "mixins/retina";
 @import "mixins/sprite";
 
+// Framework
+@import "framework/grid";
+
 // Elements
 @import "elements/error-msg";
 
@@ -27,8 +30,7 @@ STRUCTURE
 @import "components/aside";
 
 
-// Framework
-@import "framework/grid";
+
 
 * {
 	@include box-sizing(border-box);

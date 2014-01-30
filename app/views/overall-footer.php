@@ -1,6 +1,4 @@
-	    </div>
-	    <?php include "assets/includes/footer.php"; ?>
-	</div>
+    </div>
     <script>
     	var site_path = "<?php echo DIRECTORY; ?>"; 
     	var current_page = "<?php echo (!!$current_header_page ? $current_header_page : ""); ?>";

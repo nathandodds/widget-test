@@ -6,16 +6,9 @@ ________
 This is the aside that is throughout the web page.
 */
 
-aside {
+.aside {
+	float: left;
 	width: 300px;
-
-	a {
-		color: #FFDD00;
-		font-family: 'Arial';
-		font-size: 12px;
-		text-decoration: none;
-	}
-
 }
 
 /*NEWS SECTION STYLING*/
@@ -87,13 +80,14 @@ aside {
 	font-family: arial;
 	font-weight: bold;
 	margin: 0;
-	padding: 2px 0 0 0;
+	padding: 8px 0 4px 0;
 }
 
 .aside__widget--content {
 	color: #fff;
 	font-size: 13px;
 	margin: 0;
+	margin-bottom: 2px;
 }
 
 .widget__content {
@@ -103,8 +97,41 @@ aside {
 a,
 .aside__widget--title,
 .aside__widget--content {
-	//float: left;
-	padding-left: 5px;
+	padding-left: 15px;
+}
+
+.aside__widget--link {
+	color: #FFDD00;
+	font-family: 'Arial';
+	font-size: 12px;
+	text-decoration: none;
+	position: relative;
+	padding-right: 20px;
+
+	&:before {
+		content:'';
+		margin-top: -5px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+
+		/* Triangle */
+		border-color: transparent transparent transparent #ffdd00;
+		border-style: solid;
+		border-width: 5.5px 0 5.5px 10px;
+		height: 0px;
+		width: 0px;
+		
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+
+		&:before {
+			border-color: transparent transparent transparent #EB5A2C;
+		}
+	}
 }
 
 /*Different color widgets.*/
@@ -135,9 +162,9 @@ a,
 }
 
 .widget-image__snapshot {
-		float: right;
-		overflow: hidden;
-		margin: 3px -8px 0 0;
+	float: right;
+	overflow: hidden;
+	margin: 3px -5px 0 0;
 
 }
 
@@ -145,3 +172,111 @@ a,
 	float: right;
 	margin: 15px 10px 0 0;
 }
+
+/*
+
+COSMOS WIDGET STYLING
+----------------------
+*/
+
+.cosmos-widget {
+	float: right;
+	width: 976px;
+	padding: 0;
+	list-style: none;
+	
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.cosmos-widget__content {
+	h2 {
+		color: #34313A;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: #34313A;
+		font-size: 14px;
+	}
+}
+
+	h2,
+	p,
+	a {
+		text-align: left;
+	}
+
+.cosmos-widget__text-link {
+		color: #34313A;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+.wardrobe-builder {
+	background: #EA5D4E;
+	color: #FFF;
+	padding: 0.5em;
+}
+
+.grid__standard-doors {
+	width: 41.453428725%;
+
+}
+
+.grid__made-to-measure {
+	width: 58.546571275%;
+}
+
+
+/*TOP WIDGETS STYLING*/
+
+.cosmos-widget__top {
+	border: 2px solid #C8D1C9;
+	padding-left: 87px;
+}
+
+.standard-doors-image,
+.made-to-measure-image {
+	&:before {
+		content: '';
+		display: block;
+		height: 60px;
+		left: 45%;
+		margin-left: -36px;
+		position: absolute;
+		top: 54px;
+		width: 45px;
+		z-index: 1;
+	}
+}
+
+.standard-doors-image {
+	&:before {
+		@include sprite(0 0);
+	}
+}
+
+.made-to-measure-image {
+	&:before {
+		@include sprite(102px 0);
+	}
+}
+
+/*LOWER WIDGETS STYLING*/
+.cosmos-widget__lower-image {
+	border: solid 2px #7B898A;
+	display: block;
+}
+
+

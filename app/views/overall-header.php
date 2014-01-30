@@ -28,10 +28,8 @@
             <link rel="stylesheet" href="<?php echo $style; ?>">
             <!--<![endif]-->
         <?php endforeach; ?>
-        <?php include('assets/includes/ga.php'); ?>
     </head>
     <body>
         <div class="wrapper">
             <?php require "assets/includes/ie-notification.php"; flush(); ?>
-            <?php include "assets/includes/navigation.php"; ?>
-            <div class="container content grid">
+            
