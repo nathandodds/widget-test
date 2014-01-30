@@ -1,0 +1,512 @@
+/*
+
+NAVIGATION
+----------
+
+The styles for the navigation framework are held within here, all the styles added are for a template styled 
+navigation. There are different types of navigations that can be found here, the code has been duplicated and 
+added multiple times as that way the relevant base can be used and delete the other code without becoming confused 
+at what can be deleted and what can't.
+
+*/
+
+.nav {
+	background: $nav-colour;
+	
+	@include bp(desktop){
+		line-height: $nav-height;
+		position: relative;
+
+		@if ($MQs) == true {
+			.nav__mobile-icon {
+				display: none;
+			}
+		}
+	}
+}
+	
+/*
+
+MOBILE NAVIGATION
+-----------------
+
+	<!-- If we have a standard navigation that will have the logo on the left and links on the right -->
+	<nav class="nav mobile-nav">
+		<div class="container grid">
+			<p class="nav__logo"><a href="<?php echo DIRECTORY; ?>" title="Pegisis">Pegisis</a></p>
+			<p class="nav__mobile-icon"><a href="" class="js-toggle-nav">&#9776;</a></p>
+			<ul class="nav__links grid__three-quarter">
+				<li><a href="" title="link 1">Link 1</a></li>
+				<li><a href="" title="link 2">Link 2</a></li>
+				<li><a href="" title="link 3">Link 3</a></li>
+				<li><a href="" title="link 4">Link 4</a></li>
+				<li><a href="" title="link 5">Link 5</a></li>
+				<li><a href="" title="link 6">Link 6</a></li>
+			</ul>
+		</div>
+	</nav>
+
+*/
+
+@if ($MQs) == true {
+	@include bp(mobile) {
+		.mobile-nav {
+
+			.nav__logo,
+			.nav__links,
+			.nav__mobile-icon {
+				line-height: normal;
+				margin: 0;
+				vertical-align: middle;
+			}
+
+			.nav__logo {
+				display: inline-block;
+				width: 80%;
+
+				a {
+					display: inline-block;
+					font-size: 1.25em;
+					// When we are using a real logo we might want to use these properties
+					//display: block;
+					//height: height;
+					//width: width;
+					//@include img-replace;
+					//@include sprite(0 0);
+				}
+			}
+
+			.nav__mobile-icon {
+				display: inline-block;
+				text-align: right;
+				width: 20%;
+
+				a {
+					color: $nav-font-color;
+					font-size: 2em;
+					line-height: 1;
+				}
+			}
+
+			.nav__links {
+				background: $subnav-colour;
+				display: none;
+				
+				li {
+					border-top: 1px solid white;
+					display: block;
+					line-height: 2;
+					text-align: left;
+
+					&:first-child {
+						border-top: none;
+					}
+				}
+			}
+
+			.nav__sublinks {
+				display: none;
+			}
+
+			a {
+				color: $nav-font-color;
+				text-decoration: none;
+				text-transform: uppercase;
+				@include transition;
+
+				&:hover,
+				&:focus {
+					color: darken($nav-font-color,15%);
+				}
+			}
+		}
+	}
+}
+
+@else {
+	.nav__mobile-icon {
+		display: none;
+	}
+}
+
+/*
+
+INLINE NAVIGATION
+-----------------
+
+	<!-- If we have a standard navigation that will have the logo on the left and links on the right -->
+	<nav class="nav nav-inline mobile-nav">
+		<div class="container grid">
+			<p class="grid__quarter nav__logo"><a href="<?php echo DIRECTORY; ?>" title="Pegisis">Pegisis</a></p>
+			<p class="nav__mobile-icon"><a href="" class="js-toggle-nav">&#9776;</a></p>
+			<ul class="nav__links grid__three-quarter">
+				<li><a href="" title="link 1">Link 1</a></li>
+				<li><a href="" title="link 2">Link 2</a></li>
+				<li><a href="" title="link 3">Link 3</a></li>
+				<li><a href="" title="link 4">Link 4</a></li>
+				<li><a href="" title="link 5">Link 5</a></li>
+				<li><a href="" title="link 6">Link 6</a></li>
+			</ul>
+		</div>
+	</nav>
+
+*/
+
+.nav-inline {
+
+	.container {
+		@include bp(desktop){
+			padding: 0 $container-padding;
+		}
+	}
+
+	.nav__logo,
+	.nav__links,
+	.nav__mobile-icon {
+		line-height: normal;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	.nav__logo {
+		display: inline-block;
+
+		@include bp(desktop) {
+			text-align: left;
+			@extend .grid__quarter;
+		}
+
+		a {
+			display: inline-block;
+			font-size: 1.25em;
+			// When we are using a real logo we might want to use these properties
+			//display: block;
+			//height: height;
+			//width: width;
+			//@include img-replace;
+			//@include sprite(0 0);
+		}
+	}
+
+	.nav__links {
+
+		@include bp(desktop) {
+			background: none;
+			display: inline-block;
+			text-align: right;
+		}
+		
+		li {
+
+			@include bp(desktop) {
+				border-top: none;
+				display: inline-block;
+				margin-left: 1em;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	a {
+		color: #FFF;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include transition;
+
+		&:hover,
+		&:focus {
+			color: darken(#FFF,15%);
+		}
+	}
+}
+
+/*
+
+NAV WITH LOGO IN THE MIDDLE
+---------------------------
+
+	<nav class="nav nav-inline-center mobile-nav">
+		<div class="container">
+			<ul class="nav__links">
+				<li><a href="" title="link 1">Link 1</a></li>
+				<li><a href="" title="link 2">Link 2</a></li>
+				<li><a href="" title="link 3">Link 3</a></li>
+				<li><a href="<?php echo DIRECTORY; ?>" class="nav__logo" title="Pegisis">Pegisis</a></li>
+				<li><a href="" title="link 4">Link 4</a></li>
+				<li><a href="" title="link 5">Link 5</a></li>
+				<li><a href="" title="link 6">Link 6</a></li>
+			</ul>
+		</div>
+	</nav>
+
+*/
+
+.nav-inline-center {
+	text-align: center;
+
+	.container {
+		padding: 0;
+	}
+
+	.nav__logo,
+	.nav__links {
+		display: inline-block;
+		line-height: normal;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	.nav__logo {
+		font-size: 1.25em;
+		// When we are using a real logo we might want to use these properties
+		//display: block;
+		//height: height;
+		//width: width;
+		//@include img-replace;
+		//@include sprite(0 0);
+	}
+
+	.nav__links {
+
+		li {
+			display: inline-block;
+			margin-left: 1em;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	a {
+		color: #FFF;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include transition;
+
+		&:hover,
+		&:focus {
+			color: darken(#FFF,15%);
+		}
+	}
+}
+
+/*
+
+NAVIGATION BLOCK
+----------------
+
+This will place the logo about the nav links in a central aligned position
+
+	<nav class="nav nav-block">
+		<div class="container">
+			<p class="nav__logo"><a href="<?php echo DIRECTORY; ?>" title="Pegisis">Pegisis</a></p>
+			<ul class="nav__links">
+				<li><a href="" title="link 1">Link 1</a></li>
+				<li><a href="" title="link 2">Link 2</a></li>
+				<li><a href="" title="link 3">Link 3</a></li>
+				<li><a href="" title="link 4">Link 4</a></li>
+				<li><a href="" title="link 5">Link 5</a></li>
+				<li><a href="" title="link 6">Link 6</a></li>
+			</ul>
+		</div>
+	</nav>
+*/
+
+.nav-block {
+	text-align: center;
+
+	.container {
+		padding: 0.5em 0;
+	}
+
+	.nav__logo,
+	.nav__links {
+		display: block;
+		line-height: normal;
+		margin: 0.5em 0;
+	}
+
+	.nav__logo {
+		font-size: 1.25em;
+		// When we are using a real logo we might want to use these properties
+		//display: block;
+		//height: height;
+		//width: width;
+		//@include img-replace;
+		//@include sprite(0 0);
+	}
+
+	.nav__links {
+		li {
+			display: inline-block;
+			margin-left: 1em;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	a {
+		color: #FFF;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include transition;
+
+		&:hover,
+		&:focus {
+			color: darken(#FFF,15%);
+		}
+	}
+}
+
+/*
+
+NAV - LINK HOVER BRINGS DROPDOWN
+--------------------------------
+
+
+	<!-- Inline navigation with the logo on the left and links on the right. Also this type of nav can be made to be fixed -->
+	<nav class="nav nav-inline mobile-nav">
+		<div class="container grid">
+			<p class="nav__logo"><a href="<?php echo DIRECTORY; ?>" title="Pegisis">Pegisis</a></p>
+			<p class="nav__mobile-icon"><a href="" class="js-toggle-nav">&#9776;</a></p>
+			<ul class="nav__links grid__three-quarter">
+				<li class="nav__links--dropdown">
+					<a href="" title="link 1">Link 1</a>
+					<div class="nav__sublinks">
+						<ul class="nav__sublinks--links">
+							<li><a href="">Link 1a</a></li>
+							<li><a href="">Link 1b</a></li>
+							<li><a href="">Link 1c</a></li>
+							<li><a href="">Link 1d</a></li>
+							<li><a href="">Link 1e</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+*/
+
+@if ($subnav-hover) == true {
+
+	.nav {
+		.nav__links {
+			line-height: $nav-height;
+			padding: 0 $container-padding;
+		}
+
+		.nav__sublinks {
+			background: $subnav-colour;
+			display: block;
+			height: $subnav-height;
+			left: 0;
+			line-height: normal;
+			visibility: hidden;
+			position: absolute;
+			text-align: center;
+			top: 100%;
+			width: 100% !important;
+		}
+
+		.nav__sublinks--links {
+			margin: auto;
+			max-width: $container-width;
+			padding: ($container-padding * 2);
+		}
+
+		.nav__links--dropdown {
+			a {
+				display: block;
+			}
+
+			&:hover > .nav__sublinks,
+			&:focus > .nav__sublinks {
+				visibility: visible;
+			}
+		}
+	}
+}
+
+/*
+
+NAV - LINK TOGGLE BRINGS DROPDOWN
+---------------------------------
+
+	<!-- Inline navigation with the logo on the left and links on the right. Also this type of nav can be made to be fixed -->
+	<nav class="nav nav-inline mobile-nav">
+		<div class="container grid">
+			<p class="nav__logo"><a href="<?php echo DIRECTORY; ?>" title="Pegisis">Pegisis</a></p>
+			<p class="nav__mobile-icon"><a href="" class="js-toggle-nav">&#9776;</a></p>
+			<ul class="nav__links grid__three-quarter">
+				<li>
+					<a href="" class="js-toggle-subnav" title="link 1">Link 1</a>
+					<div class="nav__sublinks">
+						<ul class="nav__sublinks--links">
+							<li><a href="">Link 1a</a></li>
+							<li><a href="">Link 1b</a></li>
+							<li><a href="">Link 1c</a></li>
+							<li><a href="">Link 1d</a></li>
+							<li><a href="">Link 1e</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+*/
+
+@if ($subnav-toggle) == true {
+	.nav {
+		.nav__sublinks {
+			background: $subnav-colour;
+			display: none;
+			height: $subnav-height;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 100%;
+			width: 100% !important;
+		}
+
+		.nav__sublinks--links {
+			margin: auto;
+			max-width: $container-width;
+			padding: ($container-padding * 2);
+		}
+	}
+}
+
+/*
+
+NAV FIXED
+---------
+
+If we want the navigation to be fixed all we have to do is use the variables stylesheet and change the 
+the default value to be true and adjust the line-height within that variable 'nav-height' to correspond 
+to the height of our nav and then our nav should be fixed with no content hidden behind it
+
+*/
+		
+@if ($nav-fixed) == true {
+
+	@include bp(desktop) {
+		.nav {
+			line-height: $nav-height;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.wrapper {
+			margin-top: $nav-height;
+		}
+	}
+}

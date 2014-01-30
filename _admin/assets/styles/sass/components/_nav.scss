@@ -1,0 +1,81 @@
+.sub__content {
+
+	nav {
+		margin: auto 10px;
+		padding: 0 0 0 0;
+		position: relative;
+		width: 100%;
+
+		&:after {
+			content: "";
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			right: -14px;
+			position: absolute;
+			top: 0;
+			width: 1px;
+
+		}
+
+		ul {
+			display: block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			/* CSS3 */
+			border-radius: 0.4em;
+			-moz-border-radius: 0.4em;
+			-webkit-border-radius: 0.4em;
+
+			li {
+				background: #ECF0F1; /* Old browsers */
+				border-bottom: 1px solid #DDDDDD;
+				color: #364A5E;
+				font-family: TTRegular;
+				line-height: 30px;
+				margin: 0px 0 1px 0;
+				padding: 5px 0 5px 8px;
+
+				&:hover {
+					background: #BEC3C7; /* Old browsers */
+
+				}
+
+				&:first-child {
+					background: #E44C40; /* Old browsers */
+					border: none;
+					color: white;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 35px;
+					padding: 0 0 0 8px;
+
+					&:hover {
+						background: #C1392B;
+					}
+
+					a {
+						color: white;
+					}
+				}
+
+				a {
+					display: block;
+					font-size: 14px;
+					line-height: 40px;
+					padding: 0 0 0 8px;
+					color: #3f3f3f;
+					
+				}
+			}
+		}
+
+		select {
+			display: none;
+			font-size: 18px;
+			width: 100%;
+			
+		}
+	}
+}

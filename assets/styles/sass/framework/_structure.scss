@@ -1,0 +1,71 @@
+/*
+
+STRUCTURE
+---------
+
+*/
+
+// Config settings and variables
+@import "config/settings";
+@import "config/variables";
+
+// Mixins
+@import "mixins/hacks";
+@import "mixins/img-replace";
+@import "mixins/media-queries";
+@import "mixins/opacity";
+@import "mixins/prefixes";
+@import "mixins/retina";
+@import "mixins/sprite";
+
+// Elements
+@import "elements/error-msg";
+
+// Components
+@import "components/navigation";
+@import "components/footer";
+@import "components/aside";
+
+
+// Framework
+@import "framework/grid";
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	font: #{($base-font-size / 16px) * 1em} / #{$line-height-ratio} $base-font-family;
+	margin: 0;
+
+	-webkit-text-size-adjust: none; // stops the text from becoming bigger on orientation on iPhone / iPad devices
+	  -webkit-font-smoothing: antialiased; // makes the font smooth on webkit devices
+}
+
+.wrapper {
+	//margin: auto;
+	max-width: $wrapper-width;
+
+	@if ($MQs) == false {
+		min-width: $container-width; // when we are doing a desktop build need to include our min-width as 60em! This is the default that devices read, any bigger then will have to scroll
+	}
+}
+
+.container {
+	margin: auto;
+	//min-width: 60em; // when we are doing a desktop build need to include our min-width as 60em! This is the default that devices read, any bigger then will have to scroll
+	max-width: $container-width;
+	
+	@include bp(desktop) {
+		padding: $container-padding;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+	margin: 0;
+	padding-top: $container-padding;
+}

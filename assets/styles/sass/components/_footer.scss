@@ -1,0 +1,43 @@
+/*
+	
+FOOTER
+------
+
+	<footer class="footer">
+		<div class="container">
+			<ul class="footer__links">
+				<li><a href="">Link 1<a></li>
+				<li><a href="">Link 2<a></li>
+				<li><a href="">Link 3<a></li>
+				<li><a href="">Link 4<a></li>
+				<li><a href="">Link 5<a></li>
+				<li><a href="">Link 6<a></li>
+			</ul>
+		</div>
+	</footer>
+
+*/
+
+.footer {
+	background: #A1A1A1;
+	text-align: center;
+
+	.footer__links {
+		li {
+			display: inline-block;
+			margin: 0 1em;
+		}
+
+		a {
+			color: lighten(#000, 20%);
+			text-decoration: none;
+
+			@include transition;
+
+			&:hover,
+			&:focus {
+				color: lighten(#000, 40%);
+			}
+		}
+	}
+}

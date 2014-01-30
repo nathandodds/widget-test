@@ -1,0 +1,47 @@
+/*
+
+CAROUSEL
+--------
+
+*/
+
+.carousel {
+	overflow: hidden; /* this needs to be set to overflow hidden as otherwise all slides will be shown */
+}
+
+.carousel__holder {
+	margin: 0 auto;
+    max-width: 960px; /* however wide you need the carousel to be to display one image */
+    padding: 0;
+}
+
+.bx-viewport {
+    overflow: visible !important; /* Has to have important to overwrite the javascript */
+
+    /* With the visible set this allows us to see all of the slides */
+}
+
+.carousel__list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden; /* helps with the loading in of the images so doesn't go outside the ul */
+    padding: 0;
+}
+
+.carousel__list li {
+    margin: 0;
+    padding: 0;
+
+    /* If you decide to use as a background image set height and width in here */
+}
+
+.carousel__list--img {
+    display: block;
+    width: 100%;
+}
+
+/* Just a quick style to make numbers look neater */
+.bx-pager-item {
+    display: inline-block;
+    width: 20px;
+}

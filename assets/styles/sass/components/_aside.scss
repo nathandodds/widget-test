@@ -1,0 +1,147 @@
+/*
+
+ASIDE
+________
+
+This is the aside that is throughout the web page.
+*/
+
+aside {
+	width: 300px;
+
+	a {
+		color: #FFDD00;
+		font-family: 'Arial';
+		font-size: 12px;
+		text-decoration: none;
+	}
+
+}
+
+/*NEWS SECTION STYLING*/
+
+.aside__news {
+	padding: 0;
+	margin-top: 0;
+
+	img {
+		background: #fff;
+		float: left;
+		overflow: hidden;
+		height: 45px;
+		width: 45px;
+	 	padding: 2px 2px 10px 2px;
+	 	margin: 9px 6px 0 10px;
+
+	 	-webkit-box-shadow: 1px 1px 1px #ccc;
+		   -moz-box-shadow: 1px 1px 1px #ccc;
+			 -o-box-shadow: 1px 1px 1px #ccc;
+			-ms-box-shadow: 1px 1px 1px #ccc;
+			    box-shadow: 1px 1px 1px #ccc;
+	}
+}
+
+.aside__news--header {
+	background: #32B14E;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Arial';
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 0 10px 15px;
+}
+
+.aside__news--block {
+	height: 64px;
+	list-style: none;
+}
+
+.aside__background{
+	background: #E3F2E7
+}
+		
+.aside__news--title {
+	color: #231F20;
+	font-size: 14px;
+	font-family: 'Arial';
+	margin:0;
+	padding-top: 4px;
+}
+
+.aside__news--content{
+	color: #4D4D4D;
+	font-size: 11px;
+	margin: 0;
+}
+
+/*WIDGET STYLING*/
+
+.aside__widget--block {
+	height: 104px;
+	margin: 10px 0;
+}
+
+.aside__widget--title {
+	color: #fff;
+	font-size: 18px;
+	font-family: arial;
+	font-weight: bold;
+	margin: 0;
+	padding: 2px 0 0 0;
+}
+
+.aside__widget--content {
+	color: #fff;
+	font-size: 13px;
+	margin: 0;
+}
+
+.widget__content {
+	overflow: hidden;
+}
+
+a,
+.aside__widget--title,
+.aside__widget--content {
+	//float: left;
+	padding-left: 5px;
+}
+
+/*Different color widgets.*/
+
+.gallery-widget {
+	background: #32B14E;
+}
+
+.performance-widget {
+	background: #21B6E2;
+}
+
+.download-widget {
+	background: #7E539F;
+}
+
+.sunnydays-widget {
+	background: #EF8292;
+}
+
+/*IMAGE STYLING*/
+
+.news-image img {
+	float: left;
+	overflow: hidden;
+	height: 35px;
+	width: 45px;
+}
+
+.widget-image__snapshot {
+		float: right;
+		overflow: hidden;
+		margin: 3px -8px 0 0;
+
+}
+
+.widget-image {
+	float: right;
+	margin: 15px 10px 0 0;
+}

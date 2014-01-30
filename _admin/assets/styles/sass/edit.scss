@@ -1,0 +1,193 @@
+//structure
+@import "layouts/structure";
+
+@import "components/nav";
+@import "components/elements";
+@import "components/wysiwyg";
+
+.main__editor {
+	background: #FFF;
+	margin: 2px auto 0;
+	width: 95%;
+	overflow: hidden;
+
+	.main__editor--heading {
+		background: #E1E2E3; /* Old browsers */
+		border-bottom: 1px solid #FFF;
+		color: #364A5E;
+		line-height: 34px;
+
+		a {
+			margin-right: 16px;
+		}
+
+		.ie9 & {
+			filter: none;
+		}
+
+		.another_product {
+			color: white;
+			float: right;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.main__editor--form {
+		padding: 0 4% 4%;
+
+		border-radius: 0 0 6px 6px;
+		-moz-border-radius: 0 0 6px 6px;
+		-webkit-border-radius: 0 0 6px 6px;
+
+		label {
+			display: inline-block;
+			width: 15%;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+
+			.item_listing {
+				line-height: 1.75;
+
+				.item_title {
+					width: 50%;
+				}
+
+				a {
+					background: #C5C5C5;
+					color: white;
+					display: inline-block;
+					margin: 4px 0;
+					padding : 5px 8px;;
+					border-radius: 50%;
+					-moz-border-radius: 50%;
+					-webkit-border-radius: 50%;
+				}
+
+				.edit_icon{
+					&:hover,
+					&:focus {
+						background: #b2cf55;
+					}
+				}
+
+				.remove_icon {
+					&:hover,
+					&:focus {
+						background-color: red;
+					}
+				}
+
+				span {
+					font-size: 0px;
+				}
+			}
+		}
+
+		.images_holder {
+			margin: 1em 0;
+			overflow: hidden;
+			width: 75%;
+
+			.delete-button {
+				float: left;
+				color: #FFF;
+				display: block;
+				margin: 1em 0;
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		a {
+			color: #000;
+		}
+
+		table {
+			border-collapse: collapse;
+
+			thead, tbody {
+				th {
+					border-bottom: 1px solid #000;
+				}
+
+				th, td {
+					padding: 5px;
+					text-align: center;
+
+					&:first-child {
+						text-align: left;
+					}
+
+					img {
+						margin: 0 auto;
+						max-width: 100%;
+					}
+				}
+			}
+
+			tfoot {
+				border-top: 1px solid #000;
+
+				td {
+					padding: 5px;
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	.subject_container {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		vertical-align: top;
+
+		label {
+			vertical-align: top !important;
+		}
+
+		.subjects {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 70%;
+			vertical-align: bottom;
+
+			li {
+				margin: 12px 14px 12px 0;
+
+				&:first-child {
+					margin: 0 0;
+				}
+			}
+
+			.sub_subject {
+				margin-left: 1em;
+			}
+		}
+
+	}
+
+}
+
+.main__editor .main__editor--form label {
+	vertical-align: middle;
+	margin: 5px 0;
+	width: 20%;
+}
+
+@media all and (max-width: 600px) {
+	input[type="checkbox"], input[type=radio] {
+		display: inline-block !important;
+		width: 5% !important;
+	}
+}

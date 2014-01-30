@@ -1,0 +1,15 @@
+/*
+
+MIXIN = SPRITE
+--------------
+
+*/
+
+@mixin sprite ($bg-position) {
+	background: $sprite $bg-position no-repeat;
+	
+	@include retina {
+		background: $sprite-retina $bg-position no-repeat;
+		background-size: $sprite-width;
+	}
+}

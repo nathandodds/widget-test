@@ -1,0 +1,48 @@
+/*
+
+MIXIN = MEDIA QUERIES 
+---------------------
+
+This mixin can be used for when we are building a responsive website from mobile first.
+It is using the basic concept that was originally posted by Chris Coyier from CSS Tricks and adapted 
+slightly to fit around our desired templates.
+
+For more documentation check out: http://css-tricks.com/conditional-media-query-mixins
+
+*/
+
+// Mixin content
+@mixin bp($point) {
+
+	// If our media queries are set to true (as they are by default) 
+	// then we want to add our media query breakpoints
+	@if ($MQs) == true {
+		/*
+		 * Examples of other breakpoints we could add:
+		 *
+		 * $bp-kindle: "(min-width: 569px)";
+		 * $bp-ipadport: "(min-width: 768px)";
+		 * $bp-ipadland: "(min-width: 1024px)";
+		 * $bp-desktop: "(min-width: 1025px)";
+		 */
+
+		// Our desktop styles start from this size as the max mobile width is 568px (iphone 5 landscape)
+		$bp-mobile: "(max-width: 568px)"; 
+		$bp-desktop: "(min-width: 569px)"; 
+
+		@if $point == mobile {
+			@media #{$bp-mobile} { @content; }
+		}
+
+		@if $point == desktop {
+			@media #{$bp-desktop} { @content; }
+		}
+	}
+
+	// If we are on an older browser such as ie8 or lower that doesn't support media queries we want
+	// to just display all our styling within our class without our breakpoints and the hierarchy will
+	// adopt our other styles so our desktop version will look the same
+	@else if ($MQs) == false {
+		@content;
+	}
+}

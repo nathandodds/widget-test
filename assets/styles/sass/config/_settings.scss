@@ -1,0 +1,28 @@
+/*
+
+CONFIG = SETTINGS
+-----------------
+
+Do not touch these settings to change any features, this is part of the framework and 
+only should be used to turn settings on and off!
+
+*/
+
+// Images compression - change to true to use compressed images
+$production: false !default;
+
+$image-path: "../images/";
+
+@if $production {
+	$image-path: "#{$image-path}compressed/";
+}
+
+// Sprite image path
+$sprite: url("#{$image-path}sprite.png");
+$sprite-retina: url("#{$image-path}retina/sprite_2x.png");
+
+// Media queries - if media queries are not being used then set to false
+$MQs: true !default;
+
+// Grid - if grids are not needed then set to false
+$grid: true !default;

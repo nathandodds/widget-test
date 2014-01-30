@@ -1,0 +1,332 @@
+//structure
+@import "layouts/structure";
+//navigation
+@import "components/nav";
+//listing table
+@import "components/table_listing";
+//page elements
+@import "components/elements";
+
+.container {
+ margin: 0px auto 0;
+}
+
+
+.page_title {
+	background: #E1E2E3; /* Old browsers */
+	line-height: 32px;
+	overflow: hidden;
+	/* CSS3 */
+
+	.page_name {
+		color: #364A5E;
+		font-size: 20px;
+		font-weight: bold;
+		float: left;
+		margin: 0 0 0 8px;
+		padding: 3px 5px 0;
+
+	}
+	.js-filter {
+        background: #E44C40;
+        color: white;
+        font-size: 15px;
+        line-height: 35px;
+		font-weight: bold;
+        float: right;
+        padding: 0 10px;
+        text-transform: uppercase;
+
+    }
+}
+
+.filter {
+	display: none;
+	background: #F9FDFD;
+
+	margin: 0;
+	padding: 8px;
+	position: relative;
+
+	dl {
+		margin: 0 0 0 10px;
+		font-size: 14px;
+		padding: 0;
+		width: 90%;
+
+		dt, dd {
+			display: inline-block;
+			margin: 0;
+			padding: 5px 0;
+
+		}
+	}
+}
+
+.search-button {
+	border: none;
+	background: #34495E;
+	color: white;
+	float: right;
+	line-height: 30px;
+	width: 90px;
+	padding: 0;
+
+	&:hover {
+		background: #2D3E50;
+	}
+}
+
+.reset {
+	background: #34495E;
+	color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 35px;
+	position: absolute;
+	right: 75px;
+	padding: 0 10px;
+	text-transform: uppercase;
+}
+
+
+/* TABS */
+/*
+.tabs {
+  position: relative;   
+  min-height: 260px;
+  clear: both;
+  margin: 25px 0;
+
+  .tab {
+	  float: left;
+
+	  	label {
+		  
+		  background: #E1E2E3;
+	  	  color: #364A5E;
+		  font-size: 15px;
+		  font-weight: bold;
+		  padding: 10px 20px; 
+		  border: 1px solid #ccc; 
+		  margin-left: -1px; 
+		  position: relative;
+		  left: 1px; 
+		}
+
+		.content {
+		  position: absolute;
+		  top: 26px;
+		  left: 0;
+		  background: white;
+		  right: 0;
+		  bottom: 0;
+		  padding: 20px;
+		  border: 1px solid #ccc; 
+		}
+	}
+
+	.tab [type=radio] {
+	  display: none !important;   
+	}
+
+	[type=radio]:checked ~ label {
+	  background: #E44C40; 
+	   color: white;
+	  border: 1px solid #ccc;
+	  z-index: 2;
+	}
+
+	[type=radio]:checked ~ label ~ .content {
+	  z-index: 1;
+	}
+}
+*/
+
+.approve_selected {
+	border: none;
+	color: white;
+	cursor: pointer;
+	line-height: 24px;
+	background: #2DCC70;
+	position: absolute;
+
+	&:hover {
+		background: #27AE61;
+	}
+}
+
+.archive_selected {
+	border: none;
+	color: white;
+	cursor: pointer;
+	background: #C1392B;
+	line-height: 24px;
+	position: absolute;
+	right: 20px;
+
+	&:hover {
+		background: #E84C3D;
+	}
+}
+
+.download_csv {
+	border: none;
+	color: white;
+	left: 50%;
+	cursor: pointer;
+	margin-left: -56px;
+	line-height: 24px;
+	background: #34495E;
+	position: absolute;
+
+	&:hover {
+		background: #2C3E50;
+	}
+}
+
+
+.tabs {
+	margin: 0 0 60px 0;
+	padding: 0;
+
+	.tab_list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			background: #E1E2E3;
+			color: #364A5E;
+			cursor: pointer;
+			display: inline-block;
+			padding: 0;
+			font-size: 15px;
+		  	font-weight: bold;
+		  	padding: 10px 20px; 
+		  	border: 1px solid #ccc; 
+		  	margin-left: -4px; 
+		  	position: relative;
+		  	left: 1px;
+
+		  	&:first-child {
+		  		margin-left: -1px; 
+		  	}
+		}
+
+		.active-tab {
+			background: #E44C40; 
+	  		color: white;
+	  		border: 1px solid #ccc;
+		}
+	}
+
+	.hide {
+    	display: none
+    }
+}
+
+
+@media all and (max-width: 400px) {
+
+	.table_listing {
+		border-collapse: collapse;
+		table-layout: fixed;
+	}
+
+
+	.tabs {
+		min-height: 600px;
+	}
+
+
+	.tabs .tab .content {
+		padding: 5px;
+		top: 37px;
+	}
+
+	.table_listing thead th {
+		font-size: 13px;
+	}
+
+	.approve_selected {
+		right: 50%;
+		bottom: 100px;
+		margin-right: -100px;
+		width: 200px !important;
+	}
+
+	.archive_selected {
+		right: 50%;
+		bottom: 50px;
+		margin-right: -100px;
+		width: 200px !important;
+	}
+
+	.download_csv {
+		display: none !important;
+	}
+
+
+	.add-button {
+		width: 40px;
+	}
+
+
+	.table_listing thead th:last-child {
+		width: 50px;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50% !important; 
+		word-wrap:break-word;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(2):before { content: "Name"; font-weight: bold; }
+	td:nth-of-type(3):before { content: "Location"; font-weight: bold; }
+	td:nth-of-type(4):before { content: "Current Position"; font-weight: bold; }
+	td:nth-of-type(5):before { content: "Ref"; font-weight: bold; }
+
+	.table_listing tbody tr td:last-child {
+		text-align: left;
+	}
+
+	.school_table {
+		td:nth-of-type(4):before { content: "Email"; font-weight: bold; }
+		td:nth-of-type(5):before { content: "Ref"; font-weight: bold; }
+	}
+}
+
+

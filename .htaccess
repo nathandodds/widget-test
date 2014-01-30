@@ -1,0 +1,13 @@
+
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase /widget-test/
+            
+            # Change once live to the domain
+            #RewriteCond %{HTTP_HOST} ^domain.co.uk
+            #RewriteRule (.*) http://www.domain.co.uk/$1 [R=301,L]
+
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule ^(.*)$ index.php [L]
+        </IfModule>

@@ -1,0 +1,56 @@
+.overlay {
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	.modal {
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #AAA;
+    	height: 200px;
+    	left: 50%;
+    	margin-left: -125px;
+    	margin-top: -100px;
+    	padding: 0;
+    	position: fixed;
+    	top: 50%;
+    	width: 250px;
+    	z-index: 2;
+
+    	border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	-webkit-border-radius: 6px;
+
+    	box-shadow: 0 0 50px #000;
+    	-moz-box-shadow: 0 0 50px #000;
+    	-webkit-box-shadow: 0 0 50px #000;
+
+    	h4 {
+    		background: #E1E2E3; /* Old browsers */
+            color: #364A5E;
+    		margin: 0;
+    		padding: 10px;
+
+    		border-radius: 6px 6px 0 0;
+    		-moz-border-radius: 6px 6px 0 0;
+    		-webkit-border-radius: 6px 6px 0 0;
+    	}
+
+    	p {
+    		padding: 0 10px;
+    	}
+
+    	.deletion_buttons {
+    		text-align: center;
+
+    		input {
+	    		cursor: pointer;
+	    		margin: 0 5px;
+	    		width: 100px;
+	    	}
+    	}
+	}
+}

@@ -1,0 +1,789 @@
+<!DOCTYPE html><html><head><title>Site Styleguide
+</title><meta charset="utf-8"><style>*{-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;border:0}body{padding:60px 0 40px;background-color:hsl(207,10%,90%);color:hsl(207,5%,30%)}.container{max-width:1300px;margin:0 auto;padding:0 20px}.section{position:relative;margin-bottom:20px}.docs{position:relative;z-index:2;width:68%;min-height:200px;background-color:hsl(207,0%,100%);background-clip:padding-box;border:1px solid hsla(207,5%,5%,.1);border-radius:5px;box-shadow:0 0 3px hsla(207,5%,5%,.1)}.code{position:absolute;top:5px;bottom:5px;right:0;z-index:1;width:33%;padding:10px 10px 10px 20px;border-radius:0 5px 5px 0;border:1px solid hsla(207,20%,10%,.1);background-color:hsla(207,20%,95%,.9);background-clip:padding-box;opacity:.5;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s}.code:hover{opacity:1}.preview{background:hsl(207,0%,100%);border-top:1px solid hsl(207,30%,95%);position:relative;z-index:1}.preview-code+.preview{margin-top:0;border-top:0}.preview iframe{display:block;width:100%;height:100%;overflow:hidden}.preview-code{position:relative;z-index:2;display:block;width:100%;color:hsl(207,9%,37%);max-height:200px;padding:10px 20px;overflow-y:auto;background:hsl(207,30%,95%);border:1px solid hsl(207,30%,85%);border-left:0;border-right;box-shadow:inset 0 1px 2px hsla(207,30%,10%,.1);line-height:1.1!important;resize:none}.preview-code:focus{outline:0;background:hsl(207,30%,97%);box-shadow:inset 0 1px 2px hsla(207,30%,10%,.1),0 0 5px hsla(207,75%,75%,.9)}.preview-code:last-child{border-bottom:0;border-radius:0 0 5px 5px}.resizeable{padding:15px;overflow:auto;background:hsl(207,0%,100%);box-shadow:0 0 2px hsla(207,10%,20%,.2);resize:both}.preview-code,pre{white-space:pre-wrap;word-wrap:break-word;overflow-y:auto}.code pre{height:100%;margin-top:0}.bar{position:fixed;left:0;right:0;z-index:1010;min-height:40px;line-height:40px;background-image:-webkit-linear-gradient(hsla(207,10%,35%,.97),hsla(207,5%,25%,.92));background-image:-moz-linear-gradient(hsla(207,10%,35%,.97),hsla(207,5%,25%,.92));background-image:-o-linear-gradient(hsla(207,10%,35%,.97),hsla(207,5%,25%,.92));background-image:linear-gradient(hsla(207,10%,35%,.97),hsla(207,5%,25%,.92))}.bar.top{top:0;box-shadow:0 1px 2px hsla(207,5%,0%,.2)}.bar.bottom{bottom:0;box-shadow:0 -1px 2px hsla(207,5%,0%,.2)}.bar ul{margin:0!important}.bar li{display:block;list-style:none}.bar .icon path{fill:hsla(27,10%,75%,.75)}.docs .icon path{fill:hsla(207,10%,75%,.5)}.docs .permalink:hover .icon path{fill:hsl(207,10%,75%)}.bar button{color:hsla(27,10%,75%,.75)}.bar button:hover .icon path,.bar button.is-active .icon path{fill:hsl(27,10%,85%)}.bar button:hover,.bar button.is-active{color:hsl(27,10%,85%)}.bar .icon{vertical-align:middle;display:inline-block}.bar,.bar a,.bar a:visited{color:hsl(27,10%,85%);text-shadow:1px 1px 0 hsla(27,5%,0%,.5)}.bar a:hover,.bar a.is-active{color:hsl(27,10%,95%);text-shadow:1px 1px 0 hsla(27,5%,0%,1);text-decoration:none}.brand{float:left;margin-right:20px;font-weight:700;font-size:16px;text-decoration:none}.brand,a.brand,a.brand:visited{color:hsl(27,5%,5%);text-shadow:1px 1px 0 hsla(27,5%,100%,.2)}.brand:hover,a.brand:hover{color:hsl(27,5%,0%);text-shadow:1px 1px 0 hsla(27,5%,100%,.3);text-decoration:none}.menu{font-size:12px}.menu>li{float:left;position:relative}.menu a{display:block;margin-right:15px}.dropdown-toggle{position:relative;padding-right:15px}.dropdown-toggle:after{display:block;position:absolute;right:0;top:18px;content:'';border:4px solid;border-left-color:transparent;border-right-color:transparent;border-bottom-color:transparent}.nav-results,.dropdown{position:absolute;z-index:1020;top:32px;left:-16px;width:175px;max-height:500px;padding:10px 0;overflow-y:auto;word-wrap:break-word;font-size:11px;line-height:20px;background-color:hsla(207,10%,25%,.97);border:1px solid hsla(207,5%,70%,.3);border-radius:3px;box-shadow:0 0 3px hsla(207,5%,0%,.2)}.toc-list{width:200px}.nav-results{right:0;width:200px;left:auto;padding:5px 0}.nav-results-filename{display:block;font-size:10px;opacity:.75}.nav-results a{display:block;line-height:15px;padding:5px 10px}.nav-results li:not([hidden])~li a{border-top:1px solid hsla(27,10%,90%,.1)}.dropdown a{padding:0 15px}.dropdown li:hover{background-color:hsl(207,10%,22%)}.nav{float:right;position:relative}.nav input[type="search"]{padding:2px 4px;color:#fff;width:150px;border:1px solid hsla(207,5%,0%,.3);background:hsla(207,12%,40%,.9);box-shadow:inset 1px 1px 3px hsla(207,5%,0%,.05),1px 1px 0 hsla(207,5%,100%,.05);border-radius:10px;-webkit-appearance:textfield}.nav input[type="search"]:focus{outline:0;background:hsla(207,7%,45%,.9)}.settings{text-align:center}.bar button{display:inline-block;vertical-align:middle;padding:0 5px;margin:0 3px;background:transparent}.bar button:first-child{margin-left:0}.settings .auto{line-height:32px;font-size:11px;font-weight:700;letter-spacing:-1px;text-shadow:none;text-transform:uppercase}body{font-family:sans-serif;font-size:14px;line-height:1.618}.docs pre,p,ol,ul,dl,figure,blockquote,table{margin-left:20px;margin-right:20px}.preview,.docs pre,p,ol,ul,dl,figure,blockquote,table{margin-top:10px}ul ul,ol ol,ul ol,ol ul,blockquote p:last-child{margin-top:0}ul,ol{padding-left:1.5em}p:last-child,ol:last-child,ul:last-child,dl:last-child{margin-bottom:20px}hr,h1,h2,h3,h4,h5,h6{margin:1em 20px .5em}h1:first-of-type{margin-top:20px}h1,h2,h3,h4,h5,h6{line-height:1.2;color:hsl(207,10%,50%)}h1 a,h1 a:hover,h1 a:visited{color:inherit;text-decoration:inherit}h1{font-size:3.052em;font-weight:400;color:hsl(207,10%,45%)}h2{font-size:1.953em}h3{font-size:1.536em}h1,h2,h3{letter-spacing:-.025em}h4{font-size:1.25em}h5{font-size:1em;text-transform:uppercase}h6{font-size:1em}.permalink{position:absolute;top:15px;right:15px}a{color:hsl(207,90%,50%);text-decoration:none}a:hover{color:hsl(207,95%,40%);text-decoration:underline}a:visited{color:hsl(207,100%,35%)}.preview-code,pre,code,var{font-style:normal;font-family:"Ubuntu Mono","Andale Mono","DejaVu Sans Mono","Monaco","Bitstream Vera Sans Mono","Consolas","Lucida Console",monospace;font-size:12px}.docs pre,code,var{padding:.1em 3px;background:hsla(207,5%,0%,.025);border:1px solid hsla(207,5%,0%,.05);border-radius:3px}.code pre{line-height:1.1!important}pre code{padding:0;background:transparent;border:0}.cf:before,.cf:after{content:'';display:table}.cf:after{clear:both}[unselectable="on"]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}[hidden]{display:none!important}small{font-size:85%;opacity:.9}</style></head><body><nav class="bar top cf"><div class="container"><a href="index.html" class="brand">Site Styleguide</a><ul class="menu"><li><a href="#" data-toggle="dropdown-1" unselectable="on" class="dropdown-toggle">components</a><ul id="dropdown-1" hidden class="dropdown"><li><a href="components-carousel.html">carousel</a></li><li><a href="components-footer.html">footer</a></li><li><a href="components-navigation.html">navigation</a></li></ul></li><li><a href="#" data-toggle="dropdown-2" unselectable="on" class="dropdown-toggle">config</a><ul id="dropdown-2" hidden class="dropdown"><li><a href="config-settings.html">settings</a></li><li><a href="config-variables.html">variables</a></li></ul></li><li><a href="#" data-toggle="dropdown-3" unselectable="on" class="dropdown-toggle">elements</a><ul id="dropdown-3" hidden class="dropdown"><li><a href="elements-error-msg.html">error-msg</a></li><li><a href="elements-hide.html">hide</a></li></ul></li><li><a href="#" data-toggle="dropdown-4" unselectable="on" class="dropdown-toggle">framework</a><ul id="dropdown-4" hidden class="dropdown"><li><a href="framework-grid.html">grid</a></li><li><a href="framework-structure.html">structure</a></li></ul></li><li><a href="layout.html">layout</a></li><li><a href="nomq.html">nomq</a></li><li><a href="#" data-toggle="dropdown-5" unselectable="on" class="dropdown-toggle">mixins</a><ul id="dropdown-5" hidden class="dropdown"><li><a href="mixins-hacks.html">hacks</a></li><li><a href="mixins-img-replace.html">img-replace</a></li><li><a href="mixins-media-queries.html">media-queries</a></li><li><a href="mixins-opacity.html">opacity</a></li><li><a href="mixins-prefixes.html">prefixes</a></li><li><a href="mixins-retina.html">retina</a></li><li><a href="mixins-sprite.html">sprite</a></li></ul></li></ul><div class="nav"><button title="Table of Contents" data-toggle="nav-toc"><svg viewBox="0 0 512 512" height="22" width="22" class="icon"><path d="M108.9,403.1V462H50v-58.9H108.9z M108.9,285.4H50v58.9h58.9V285.4zM108.9,50H50v58.9h58.9V50z M108.9,167.7H50v58.9h58.9V167.7z M167.7,344.3H462v-58.9H167.7V344.3zM167.7,50v58.9H462V50H167.7z M167.7,462H462v-58.9H167.7V462z M167.7,226.6H462v-58.9H167.7V226.6z"></path></svg></button><input type="search" placeholder="Search" class="search"></div></div></nav><section class="container"><article id="pegisis-storm-creative-internal-php-framework" class="section"><div class="docs"><a href="#pegisis-storm-creative-internal-php-framework" class="permalink"><svg viewBox="0 0 512 512" height="32" width="32" class="icon"><path d="M156.2,199.7c7.5-7.5,15.9-13.8,24.8-18.7c49.6-27.3,113.1-12.8,145,35.5l-38.5,38.5c-11.1-25.2-38.5-39.6-65.8-33.5c-10.3,2.3-20.1,7.4-28,15.4l-73.9,73.9c-22.4,22.4-22.4,58.9,0,81.4c22.4,22.4,58.9,22.4,81.4,0l22.8-22.8c20.7,8.2,42.9,11.5,64.9,9.9l-50.3,50.3c-43.1,43.1-113,43.1-156.1,0c-43.1-43.1-43.1-113-0-156.1L156.2,199.7z M273.6,82.3l-50.3,50.3c21.9-1.6,44.2,1.6,64.9,9.9l22.8-22.8c22.4-22.4,58.9-22.4,81.4,0c22.4,22.4,22.4,58.9,0,81.4l-73.9,73.9c-22.5,22.5-59.1,22.3-81.4,0c-5.2-5.2-9.7-11.7-12.5-18l-38.5,38.5c4,6.1,8.3,11.5,13.7,16.9c13.9,13.9,31.7,24.3,52.1,29.3c26.5,6.4,54.8,2.8,79.2-10.6c8.9-4.9,17.3-11.1,24.8-18.7l73.9-73.9c43.1-43.1,43.1-113,0-156.1C386.6,39.2,316.7,39.2,273.6,82.3z"></path></svg></a><h1 id="pegisis-storm-creative-internal-php-framework">Pegisis - Storm Creative internal PHP Framework</h1>
+<p><i>The all to guide...</i></p>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>Pegisis is completely intuitive - to set up you have to do very little. Unless your Rich and your computer doesn&#39;t work like the rest, then you have to change a setting.</p>
+
+<p>If your application displays an error about a controller not being defined - navigate to /core/settings/site.php and replace the proper path with the one that is commented out: </p>
+
+<code>php
+
+    &lt;?php
+
+    $settings[ &#39;USE_TAGS&#39; ] = FALSE;
+
+    $settings[ &#39;DIRECTORY&#39; ] = str_replace ( $_SERVER[ &#39;DOCUMENT_ROOT&#39; ], &#39;&#39;, DR ).&#39;/&#39;;
+
+    // If your machine errors:
+    // Replace with: &#39;/&#39;.$_SERVER[ &quot;DOCUMENT_ROOT&quot; ] . $settings[ &#39;DIRECTORY&#39; ]; 
+    $settings[ &#39;PATH&#39; ] = $_SERVER[ &quot;DOCUMENT_ROOT&quot; ] . $settings[ &#39;DIRECTORY&#39; ];
+
+    $settings[ &#39;IP&#39; ] = $_SERVER[&#39;HTTP_HOST&#39;];
+
+    $settings[ &#39;LIVE&#39; ] = FALSE;
+
+    ?&gt;</code>
+
+<strong><i>Database settings</i></strong>
+<p>To change your database settings to that of your database - go to /core/settings/database.php just replace all values with your settings</p>
+
+<h2>Command Line Utility</h2>
+<p><strong><i>Tables / Models</i></strong></p>
+
+<p>To make collaboration smoother and easier, it is preferable not to create/ammend tables via PHPMyAdmin but rather through the Command Line. This way another team member can easily migrate your database schema without having to do anything too manual.</p>
+
+<p>As all models will have a table associated with it - you will run b_mod.php command line. This will create your model in the correct place, but also create a migration for you.To run this is a Rake command in the terminal, replace name_of_model with your model name:</p>
+
+<code>php rake model[name_of_model]</code>
+
+<p>This will put you through a simple GUI that will prompt you to choose the name of the model and the column descriptions...easy. This will create a migration within cmd/nameofyourtable - you can edit this file to ammend the table structure and once done just rerun a migration command</p>
+
+<p><strong><i>Database Migration</i></strong></p>
+
+<p>To migrate another persons DB schema or to rerun yours after you have made a change just type in the terminal:</p>
+
+<code>php rake dbmigrate</code>
+
+<p><strong><i>Javascript</i></strong></p>
+
+<p>Instead of having the memorise the basic set up for a Require or Backbone set up - you can just create it quickly via the command line. Just run the following command, and follow the on screen GUI:</p>
+
+<code>php rake javascript</code>
+
+<p><strong><i>Controllers / Views</i></strong></p>
+
+<p>To create your controller and views ( as views correlate to the controller methods ) you can run the controller command. This also builds the tests and Stylesheets according to each controller method, so you don&#39;t have to! Just <strong>remember</strong> to use underscore for method names and controller names as your PHP will break! Run the following and follow the GUI instructions. Replace name_of_controller with the controller name:</p>
+
+<code>php rake controller[name_of_controller]</code>
+
+<p><i>Note: the above rake tasks for controller and models will automatically create Unit Tests for each</i></p>
+
+<h2 id="controllers-views">Controllers / Views </h2>
+
+<p>Controllers are the pages of your website - if you have a controller called page and a method called about, you would access this in the address bar as /page/about </p>
+
+<p>All Controllers that will require rendering within the browser will extend C_Controller.</p>
+
+<p>The C_Controller is pretty intuitive - it can work out which view file is needed for that method ( if named correctly ) and will render the page automatically. So all you need to get up an running is one method within a controller and you can let your view do all the work.</p>
+
+<p>The view will be loaded if it has the <em>exact</em> name as the method within the controller. All views are grouped within a directory named by their controller, so take for example:</p>
+
+<pre><code class="lang-php">
+    class Page extends C_Controller {
+
+        public function about()
+        {
+            // This will automatically render the view from within /views/templates/page/about
+        }
+
+
+        public function another_page()
+        {
+            // An example of setting the view if the C_Controller doesn&#39;t know where to look
+            $this-&gt;setView(&#39;page/another-page&#39;);
+        }
+
+    }</code></pre>
+<p>This is what the views directory would look like ( for grouping the views to the controller ): </p>
+
+<pre><code class="lang-php">
+    views /
+        templates
+            /
+            Page
+                / about
+                / another_page
+            Another_controller
+                / another_view
+                / another_view_2</code></pre>
+<p>There are numeorus helpful methods for manipulating the view within the C_Controller - documented below:</p>
+
+<pre><code class="lang-php">
+    /**
+     * Adds a variable to be accessible within the view
+     *
+     * @param string $tag - the reference name of the tag within the view
+     * @param string $value - the value to be associated to the tag
+     */
+    addTag( $tag, $value );
+
+
+    /**
+     * Merges an array of tags to the main tags array
+     * 
+     * @param array $tags - the array of tags to merge!
+     */
+    mergeTags( $tags );
+
+
+    /**
+     * Sets the script for the page ( as we use requireJS - we only have one script on the page )
+     * 
+     * @param string $script - the name of the script
+     */
+    setScript( $script );
+
+
+    /**
+     * Adds a stylesheet to the stylesheet array to associate to the view.
+     * This can either be an internal or external stylesheet - if external provide the whole path
+     * otherwise it will always default to assets/styles/
+     *
+     * @param string $stylesheet - the stylesheet
+     * @param optional boolean $raw - set to FALSE if using external stylesheet
+     */
+    addStyle( $stylesheet, $raw = TRUE );
+
+
+    /**
+     * Sets the view to render
+     *
+     * @param string $view - the view to render
+     */
+    setView( $view );
+
+
+    /**
+     * Renders a 404 page - for whatever reason you wanted to show a dead page
+     * 
+     * @param optional string $reason - the reason for that
+     */
+    render404( $reason = &quot;&quot; );
+
+
+    /**
+     *    Use if the No header/footer needs to be loaded. For example using a raw HTML page.
+     */
+    plain();</code></pre>
+<h2 id="templating">Templating</h2>
+<p>You have two options for templating - plain PHP or Blade Runner templates.</p>
+<p>To use a Blade Runner template, simply append .tmpl to the PHP view filename. This will render the template file on compile time to a legit PHP file within the _rendered folder of the views directory.</p>
+
+<strong>Blade Runner tags</strong>
+<p>Blade Runner tags are based identically to PHP tags - just without the need to put PHP tags at the beginning and end.</p>
+
+<p>Instead of wrapping PHP tags - prepend the first tag with an @ symbol and keep the naming conventions the same. No need for ending with a semi-colon either.</p>
+
+<p>Here is a few examples to demonstrate the replacement - the rest is obvious from there:</p>
+
+<code>php
+
+    /**
+     * A conditional IF example
+     */
+    @if ($fruit == &#39;banana&#39; )
+        // Do something
+    @elseif (fruit == &#39;apple&#39;)
+        // Do something else
+    @else 
+        // Do something different
+
+
+    /**
+     *    Echo&#39;ing a variable within a view
+     *  To do this you just have to wrap two curly braclets around the variable
+     */
+     {{ $variable }}
+
+    /**
+     * Foreach example
+     */
+    @foreach ($fruits as $fruit)
+        &lt;p&gt;Fruit is: {{ $fruit[&#39;title&#39;] }}
+    @endforeach</code>
+
+<h2 id="routes">Routes</h2>
+
+<p>Because routes are automatically defined by the framework by the controller to method names, you end up having to use ugly names or underscores. If you need to tidy up your routes so that your application is tidy and SEO defined you can.</p>
+
+<p>To change your routes - navigate to core/settings/routes.js. <br> You just need to say what route you want and how that will be accessed. For example: </p>
+
+<pre><code class="lang-php">
+    [{    
+        &quot;test_only&quot; : &quot;test/only&quot;,
+        &quot;test/again&quot; : &quot;testing&quot;,
+        &quot;testing&quot; : &quot;home/test&quot;,
+
+        &quot;about-us&quot;: &quot;page/about&quot;
+    }]</code></pre>
+<p>The first three lines will always be there by default - these are used for passing the Unit tests so DO NOT REMOVE. The last example is how you define a route. The first part is the route you want, then the next part is how that would normally be accessed. These routes are basically just a blanket for the real routes.</p>
+
+
+
+<h2 id="active-record">Database : ActiveRecord</h2>
+
+<p>The Active Record handles all database activity - all <em>base</em> models will extend ActiveRecord if they require connectivity with the database.</p>
+
+<p>By default - the ActiveRecord will will determine what table to use by the models name: this allows you to instantly call the model within the controller and start using it&#39;s database methods to do what you need, without having to do any setting up. You just need a Model!</p>
+
+<p><strong id="simple-finding-saving">Simple Finding &amp; Saving</strong></p>
+<p>To save a new item to the database it is as simple as below </p>
+
+<pre><code class="lang-php">
+    &lt;?php
+    $model = new Authors_model();
+
+    $model-&gt;name = &quot;Ashley Banks&quot;;
+    $model-&gt;email = &quot;ash@stormcreative.co.uk&quot;;
+
+    $model-&gt;save();
+    ?&gt;</code></pre>
+<p>If you are saving an item from a form - you don&#39;t have to set any property values to save. You can pass in the POST array and ActiveRecord will do the rest:</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+    /*
+        This example is based on the form being arranged correctly into an array, for example:
+        &lt;input type=&quot;text&quot; name=&quot;authors[name]&quot; value=&quot;Ashley Banks&quot;&gt;
+        &lt;input type=&quot;text&quot; name=&quot;authors[email]&quot; value=&quot;ash@stormcreative.co.uk&quot;&gt;
+    */
+
+    $model = new Authors_model();
+
+    // using post_set() internal form helper method
+    if( post_set() )
+        $model-&gt;save( $_POST[&#39;authors&#39;] ); 
+    ?&gt;</code></pre>
+<p>Finding an item by an ID</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+        $model = new Authors_model();
+
+        $author = $model-&gt;find(1);
+
+        // You can also choose which column to find by - ActiveRecord will default to ID
+
+        $model = new Authors_model();
+
+        $author = $model-&gt;find( &#39;ash@stormcreative.co.uk&#39;, &#39;email&#39; );
+
+    ?&gt;</code></pre>
+<p>ActiveRecord works out whether you are inserting a record or updating it - so the only method to use ( and avaliable to use ) is always Save. As long an ID is set within the ActiveRecord - it will always default to updating that record</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+        // Here is a couple of examples to updatign a value
+
+        // The normal basic way
+        $model = new Authors_model();
+
+        $model-&gt;find(1);
+
+        $model-&gt;name( &quot;Ashley S Banks&quot; );
+
+        $model-&gt;save();
+
+        // Passing the parameters into the save method and chaining the find to the save
+        $model = new Authors_model();
+
+        $model-&gt;find(1)-&gt;save( array( &#39;name&#39; =&gt; &quot;Ashley S Banks&quot; ) );
+
+    ?&gt;</code></pre>
+<p>The Find method will only ever pass back <em>one</em> record - if you want to retrieve all records as an associative array you just use the All method: </p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+        // Grabbing all data back
+        $model = new Authors_model();
+
+        $records = $model-&gt;all();
+
+        // Grabbing all data back with a where clause
+        $model = new Authors_model();    
+
+        // Notice the prepended : suffix - this is because the DB drive is PDO and we are binding the value.
+        // To bind this value you pass through an array to the all method that links the two together ( as below ):
+
+        $record = $model-&gt;where( &#39;email = :email&#39; )-&gt;all(array(&#39;email&#39; =&gt; &#39;ash@stormcreative.co.uk&#39;));
+
+    ?&gt;</code></pre>
+<p><strong id="associations">Associations</strong></p>
+<p>ActiveRecord makes associations a hell of alot easier and quicker.</p>
+
+<p>There are two associations at current that do all you need: <i>One to One</i> and <i>One to many</i></p>
+
+<p>If your table has many associations off of it - for example an Author had many Books, you set an association via the Model. Like below.</p>
+<p>This automatically brings back a record within the Find/All that holds all the data associated to this</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+        /**
+         * Set the table association in the Model
+         * via the $this-&gt;_has_many or $this-&gt;_has_one
+         */
+        class Authors_model extends Active_record {
+
+            public function __Construct()
+            {
+                parent::__Construct();
+
+                $this-&gt;_has_many = &#39;posts&#39;;
+
+                // This can also be set as an array if you have multiple
+                // $this-&gt;_has_many = array( &#39;posts&#39;, &#39;names&#39; );
+            }
+
+        }
+
+    ?&gt;
+
+    &lt;?php
+
+        $model = new Authors_model();
+
+        $model-&gt;find(1);
+
+        // This will set $posts to be an array of posts ( array(&#39;title&#39; =&gt; &#39;posts&#39; ))
+        $posts = $model-&gt;posts;
+
+    ?&gt;</code></pre>
+<p><strong id="saving-associations"><i>Saving Associations</i></strong></p>
+<p>Associations can also be saved using only <strong>one</strong> save method - there are a couple of ways to do this providing that the associations have been within the model of course. This is demonstrated below:</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+        // This first example is passing the Posts as an array key with it&#39;s values
+
+        $authors_model = new Authors_model();
+
+        $author_model-&gt;save( array( &#39;name&#39; =&gt; &quot;Ashley Banks&quot;, &#39;posts&#39; =&gt; array(&#39;title&#39; =&gt; &quot;Blog Post&quot; ) ) );
+
+        // This example is passing in the altered object of the posts model
+
+        $authors_model = new Authors_model();
+        $posts_model = new Posts_model();
+
+        $posts_model-&gt;title = &quot;Post title&quot;;
+
+        $authors_model-&gt;save( array(&#39;name&#39; =&gt; &quot;Ashley Banks&quot;, $posts_model ) );
+
+        // And of course these can all be done through the update by:
+
+        $authors_model = new Authors_model();
+        $posts_model = new Posts_model();
+
+        $posts_model-&gt;find(1);
+        $posts_model-&gt;title = &quot;Blog Post ammended&quot;;
+
+        $authors_model-&gt;find(1)-&gt;save( array(&#39;name&#39; =&gt; &quot;Ashley Banks update&quot;, $posts_model ));
+    ?&gt;</code></pre>
+<p><strong id="validation"><i>Validations</i></strong></p>
+<p>You can validate fields to ensure empty values can not be inserted into the database. This can be done through the Model as a strict rule to anything accessing that model, to say that these fields need a specific validation. If any errors occurr these become accessible as both the columns that were erroring and a message that was generated for these; for quick display within the view.</p>
+
+<p>Validations can be set within the model like so: </p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+        class Authors_model extends Active_record {
+
+            public function __Construct()
+            {
+                parent::__Construct();
+
+                $this-&gt;validate( &#39;not_empty&#39;, &#39;title&#39; );
+
+                // This example is a new method for validating the email address - with an additional message to apply to the errors
+                $this-&gt;validate( &#39;valid_email&#39;, &#39;email&#39;, &#39;Email can not be empty!&#39; );
+            }
+
+        }
+
+    ?&gt;
+
+
+    &lt;?php
+
+        $model = new Authors_model();
+
+        // Saving without any set data will now bring up errors
+        $model-&gt;save();
+
+        // Grab the errors by the errors property thats now set
+        $errors = $model-&gt;errors;
+
+        foreach( $errors as $column =&gt; message )
+        {
+            echo $column . &#39; &#39; . $message;
+        }
+
+    ?&gt;</code></pre>
+<p><strong id="build-your-own-method"><i>Build your own method</i></strong></p>
+<p>Sometimes it&#39;s quicker to say you want to do something rather than chain aload of methods - well with ActiveRecord you can do just that...aslong as it makes sense to Active Record</p>
+
+<p>We know we have a few useful methods for retrieving data:</p>
+
+<ol>
+    <li>Where: Sets up the where clause</li>
+    <li>Find: Returns an object</li>
+    <li>All: Returns an associative array</li>
+</ol>
+
+<p>The ordinary way of constructing a get query is as follows: </p>
+
+<pre><code class="lang-php">
+    $authors-&gt;where( &#39;name = :name&#39; )-&gt;all( array( &#39;name&#39; =&gt; &#39;Ashley&#39; ) );</code></pre>
+<p>But this can be fairly elegent by writing out in a bit of clearer English. For example you want to find all records by a name and email address you would do this like so: </p>
+
+<pre><code class="lang-php">
+    // So you want to say: find all where name and email is...
+    $authors-&gt;find_all_where_name_and_email( array( &#39;name&#39; =&gt; &#39;Ashley Banks&#39;, &#39;email&#39; =&gt; &#39;ash@stormcreative.co.uk&#39; ) );
+
+    // So you want one record you say: find one where name and email is whatever you want...
+    $authors-&gt;find_one_where_name_and_email( array( &#39;name&#39; =&gt; &#39;Ashley Banks&#39;, &#39;email&#39; =&gt; &#39;ash@stormcreative.co.uk&#39; ) );
+
+    // This means you can write as many wheres as you want and it will still work and build up a where clause. The method technically doesn&#39;t exist
+    $authors-&gt;find_one_where_name_and_email_or_banana_and_chicken();
+
+    // You can also just set the where through it
+    $authors-&gt;where_name_and_email()-&gt;all( array( &#39;name&#39; =&gt; &#39;Ashley Banks&#39;, &#39;email&#39; =&gt; &#39;ash@stormcreative.co.uk&#39; ) );</code></pre>
+<p>As long as your start the method with the below, you will get results: </p>
+
+<ol>
+    <li>where</li>
+    <li>find_all_where</li>
+    <li>find_all</li>
+    <li>find_one_where</li>
+    <li>find_one</li>
+</ol>
+
+<p><strong id="active-record-methods"><i>Active Record methods</i></strong></p>
+<p>See below the list of accessible ActiveRecord database methods for your use - along with their documented arguments:</p>
+<code>php
+
+    /**
+     * Appends a where argument to the where clause
+     * For example: $this-&gt;where( &quot;email = :email&quot; );
+     * Pass in the binds array to the search method ( find or all ).
+     * like: $this-&gt;where(&#39;email = :email&#39;)-&gt;all( array(&#39;email&#39; =&gt; &quot;ash@stormcreative.co.uk&quot;) );
+     *
+     * @param string $where - just a string of the where clause
+     */
+    where( $where );
+
+    /**
+     * Change how the where array is imploded
+     * Either AND or OR for each additional where argument to be concatenated with
+     *
+     * @param string $split - the string to split ( AND/OR )
+     */
+    where_split( $split );
+
+
+    /**
+     * Select the order of the results
+     * 
+     * @param string $col - the column to sort
+     * @param optional string $order - either ASC or DESC
+     */
+    order_by( $col, $order = &#39;ASC&#39;);
+
+
+    /**
+     * Select which columns to select in the get query
+     *
+     * @param mixed $columns - either array or comma seperated string of columns
+     */
+    columns( $columns );
+
+
+    /**
+     * Set the limit of the query
+     * 
+     * @param string $limit - just a number of the limit
+     */
+    limit( $limit );
+
+
+    /**
+     * Set the offset of the query
+     * 
+     * @param string $offset - just a number of the offset
+     */
+    offset( $offset );
+
+
+    /**
+     * Gets an assoc array of results and builds the query
+     * 
+     * @param optional array - the array of values to bind for a query
+     */
+    all( $binds = array() );
+
+
+    /**
+     * Get a specific item from the DB - returns an object
+     *
+     * @param int $id - the id of the field to get
+     * @param optional string $field - the field search
+     * @param optional string $type - either object or assoc
+     */
+    find( $id, $field = &#39;id&#39;, $type = &#39;object&#39; );
+
+
+    /**
+     * Add a validation rule before saving ( usually put in a model )
+     * Example: $this-&gt;validate( &#39;not_empty&#39;, &#39;name&#39;, &quot;please dont have an empty name&quot; );
+     *            $this-&gt;validate( &#39;valid_email&#39;, &#39;email&#39; );
+     *     
+     * @param limitless $arguments - just keep throwing in arguments!
+     */    
+    validate( $arguments );
+
+
+    /**
+     * Save an item to the database
+     * @params optional array $params - values to save, optional if not setting property
+     */
+    save( $params = array() );
+
+
+    /**
+     * Delete item(s) from a database
+     * This can either delete one specifc row from the set id or many and their associations
+     * @param optional array $items - the array of id&#39;s to delete
+     * @param optional array $foreign - the array of foreign ids to delete
+     */
+    delete( $items = array(), $foreign = array() )</code>
+
+
+<h2 id="testing">Testing</h2>
+
+<p>Tests are based on PHPUnit which is project-by-project installed by composer (due to the difficulty in installing PHPUnit on some machines with MAMP!)</p>
+
+<p>This Framework uses a PHPUnit wrapper framework called Codeception; to handle both Acceptance tests and Unit tests</p>
+
+<p><p font-style="color:red;"><strong>ALL TESTS MUST BE APPENDED WITH CEPT to work ( except cest tests which are cest instead of cept )</i></strong></p>
+
+<p><strong id="acceptance-testing"><i>Acceptance Testing</i></strong></p>
+<p>Acceptance tests, test the actual behaviour of the application. These check that forms are working, posting, showing correct feedback messages, links all exist on the page and are going off to where they should and that text matches the correct text that&#39;s in design. </p>
+
+<p>To first create an acceptance test ( assuming your in your project directory in terminal ) type the below code in - replacing TheTestName with the test name. This will create a test case within tests/accceptance directory</p>
+
+<p><code>php php codecept.phar generate:cept acceptance TheTestNameCept</code></p>
+<p>The above will generate a file within tests/acceptance/TheTestNameCept.php. If you view that file you will see the first two lines of the below code snippet. The below code snippet I have provided a couple of examples of how you would make a few acceptance tests. </p>
+
+<pre><code class="lang-php">
+    &lt;?php
+
+    $I = new WebGuy($scenario);
+    $I-&gt;wantTo(&#39;ensure that frontpage works&#39;);
+    $I-&gt;amOnPage(&#39;/&#39;); 
+    $I-&gt;see(&#39;Home&#39;);
+
+    // Example of checking links exist and work
+    $I-&gt;seeLink(&#39;About us&#39;);
+    $I-&gt;click(&#39;About us&#39;);
+    $I-&gt;see(&#39;About us text&#39;);
+
+    // Example of filling in a field 
+    $I-&gt;fillField(&#39;field[name]&#39;, &#39;nama&#39;);
+    $I-&gt;click(&quot;Submit&quot;);
+    $I-&gt;see(&quot;Thanks&quot;);
+
+    ?&gt;</code></pre>
+<p><strong id="unit-testing"><i>Unit Testing</i></strong></p>
+<p>Unit Tests of course are for testing the core units of your application work. To create, just as before type in below:</p>
+
+<p><code>php php codecept.phar generate:cept unit TheTestNameCept</code></p>
+<p>This will create a test within tests/units/. The test methods are all the same as PHPUnit - so use this to reference</p>
+
+<p><strong id="controller-mock-testing"><i>Controller/Mock class (Unit) Testing</i></strong></p>
+<p>You will also need to test your Controllers or Mock classes if they are accessible. This is done through the tests of Cest ( Controller Tests combined ). This is the same process of Unit test however you will have to make a few changes...</p>
+
+<p>Replace Cept with Cest at the end of the test - remove the exention of the class and pass in CodeGuy into the testing method...basically you will need the skeleton demonstrated below:</p>
+
+<pre><code class="lang-php">
+    &lt;?php
+        use Codeception\Util\Stub as Stub;
+
+        class ExampleTestCest
+        {
+            public $class = &#39;thecassname&#39;;
+
+            public function index(CodeGuy $I)
+            {
+                // Prepare classes to be used
+                $I-&gt;haveFakeClass($controller = Stub::makeEmptyExcept($this-&gt;class, &#39;index&#39;));
+
+                $I-&gt;expect(&#39;Expect that the Class will load successfully&#39;)
+                  -&gt;executeTestedMethodOn($controller)
+                  -&gt;seeResultNotEquals(false);
+
+                // A few examples of seeing if methods have been invoked ( from the C_controller )
+                $I-&gt;seeMethodInvoked($controller, &#39;setScript&#39;);
+                $I-&gt;seeMethodInvoked($controller, &#39;addTag&#39;);
+                $I-&gt;seeMethodInvoked($controller, &#39;setView&#39;);
+                $I-&gt;seeMethodInvoked($controller, &#39;addStyle&#39;);
+            }
+
+        }
+    ?&gt;</code></pre>
+<p><strong><i>Running Tests</i></strong></p>
+<p>Tests are all instantiated and run through the Rake file. </p>
+
+<p>To run <i>Acceptance Tests</i>: </p>
+
+<p><code>php rake acceptance</code></p>
+<p>To run <i>Unit Tests</i>: </p>
+
+<p><code>php rake units</code></p>
+<p>To run <em>ALL</em> tests</p>
+
+<p><code>php rake tests</code></p>
+<h2>Deploying</h2>
+
+<p>The need to upload files is abolished by using the Ant build software ( however sometimes you <em>may</em> need to manually upload images ).</p>
+
+<p>A site will <em>only</em> upload if ALL tests have passed - so it is integral an application has all passing tests before it can be uploaded.</p>
+
+<p><strong>Setting-up</strong></p>
+
+<p>First ensure the FTP details are correct and have been set within the /build.xml file. You will see in the file located somewhere something like the below, just change the details to that of the targeted server:</p>
+
+<pre><code class="lang-php">
+    &lt;ftp server=&quot;78.109.163.36&quot;
+                 userid=&quot;&quot;
+                 password=&quot;&quot;
+                 port=&quot;21&quot;
+                 remotedir=&quot;/httpdocs&quot;</code></pre>
+<p><strong id="deploying">Deploying</strong></p>
+
+<p>As mentioned, all tests will run before deploying - so take a close look at your console as it is deploying. To action this, it&#39;s another rake command: </p>
+
+<p><code>php rake deploy</code></p>
+<h2 id="helpers">Helpers</h2>
+
+<p>Helpers are just raw functions - they are accessible from anywhere within the site ( models, controllers, views ). They are there to help you quickly do a task - feel free to write anymore into the list too. </p>
+
+<p>Helpers are located in /core/helpers/helpers.php</p>
+
+<h2 id="cmd">Admin CMD</h2>
+
+<p>When you first clone this repo all the files to make the admin area work will already be available. To get started building the cms you need to be in the root of the project and you need to run &quot; rake admininit&quot;. This will set up the database structure for the admin section. The access, images and uploads tables will be created.</p>
+
+<p>The next thing to run is &quot;rake adminlisting&quot; to create a listing page. The process is as follows: </p>
+
+<ul>
+    <li>Chooseing a controller name</li>
+    <li>A loop to enter fields</li>
+</ul>
+
+<p>Each iteration of the loop will ask you for four colon separated options. These are: </p>
+
+<ul>
+    <li>Name - the name of the field. This will be used in the view and be the name of the column in the database.</li>
+    <li>
+        Type - This will be the type of field that will be used in the edit view. You can choose from:
+        <ul>
+            <li>Text</li>
+            <li>Textarea</li>
+            <li>Image</li>
+            <li>Upload</li>
+            <li>Email</li>
+            <li>Link</li>
+            <li>Date</li>
+            <li>Telephone</li>
+            <li>Radio</li>
+            <li>Select</li>
+        </ul>
+
+<textarea class="preview-code" spellcheck="false">    &lt;p&gt;Both the radio and select types need a extra fifth option but I will explain that later.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Data type - the data type that will be applied to the database column. Generally this will either be VARCHAR, INT or TEXT.&lt;/li&gt;
+&lt;li&gt;Max length - This is only required for the radio and select options because they need a fifth option. I have set up defaults if nothing is passed in for this option. VARCHAR will be defaulted to 255 and INT will be defaulted to 11.&lt;/li&gt;
+&lt;li&gt;Options - This only applies to the dropdown and select types. This needs to be a comma seperated string of the radio buttons or select options.&lt;/li&gt;</textarea><p></ul></p>
+<p>Lets run through an example how this can be used.</p>
+
+<pre><code class="lang-php">    rake admininit</code></pre>
+<p>You should see: </p>
+
+<pre><code class="lang-php">    Access model created successfully
+
+    Access table has been created successfully
+
+    Image model has been created successfully
+
+    Image table has been created successfully
+
+    Uploads model has been created successfully
+
+    Uploads table has been created successfully</code></pre>
+<p>If the table already exists you will see a SQL error.</p>
+
+<p>Next you need to run</p>
+
+<pre><code class="lang-php">    rake adminlisting</code></pre>
+<p>The first stage is to choose a name for the controller.</p>
+
+<p>Next is the loop of fields. Due to the naming convention of the generic list controller there needs to be a column named &quot;title&quot;. If the situation requires something other than title, such as name, this can be manually changed in the edit view. If it is not feasible to use a title field what so ever, the controller will not be able to use the generic listing class without a string of fields. But more on that later. Lets look at some examples: </p>
+
+<pre><code class="lang-php">    //Text field called title
+    title:text:varchar:255 OR title:text:varchar ( remember the max lenght is optional )
+
+    //Wysiwyg called description
+    description:textarea:text
+
+    //Image uploader
+    image:image
+
+    //File uploader
+    upload:upload
+
+    //Group of radio buttons ( remember the max length is required )
+    tags:radio:varchar:255:technology,business,sport
+
+    //Dropdown menu ( remember the max lenght is required )
+    gender:select:varchar:255:male,female
+
+    //Email field
+    email:email:varchar:255</code></pre>
+<p>To stop the loop and continue with the process you need to type &quot;n&quot;.<p>
+
+<p>If this will successful you will see something like:</p>
+
+<pre><code class="lang-php">    The news controller has been created successfully
+
+    news model has been created successfully
+
+    The edit view has been created successfully
+
+    The news table has been created successfully
+
+    The news has been created successfully
+
+    Unit test has been generated successfully
+
+    Acceptance test for news has been saved successfully</code></pre>
+<p>As you can see a lot of files are generated. Lets go through and explain each one.</p>
+
+<ul>
+    <li>The controller - Has the edit method with all the logic to save and edit data.</li>
+    <li>The model - This will be used by both the front end and the CMS.</li>
+    <li>The edit view - A form containing all the fields that we requested during the command line process.</li>
+    <li>The database table - With the structure requested during the command line process</li>
+    <li>The unit test - A unit test for adding / editing records</li>
+    <li>The acceptance test - A acceptance test for the edit page</li>
+</ul>
+
+<p>All listing actions will now be routed though a generic listing page. It will work one of two ways:<p>
+
+<ul>
+    <li>Passing in the table name through the URL - This will be the default option for every controller. It will only bring back the title and the create date.</li>
+    <li>Passing the table name and a list of column names as GET data - This option can be used by changing the destination of the link in the menu file. For example &quot;/listing/news/?columns=title,author,topic&quot;.</li>
+</ul>
+
+<h2>Data mocking tool</h2>
+
+<p>Manually entering test data into your projects is a pain in the arse so we have a command line tool that does it for you. Simply enter into your terminal...</p>
+
+<pre><code class="lang-php">    rake mock[tablename, number of records]</code></pre>
+<p>...and thats it. You now have a database full of test data. This reads the associations from the tables model and adds data to them as well. There is also no need to worry about image and document associations because this handles it by moving a photo or document and saving the data the same way so it reacts like a upload would.</p>
+</div></article></section><div class="bar bottom"><div hidden class="settings container"><!-- Icons from http://iconmonstr.com--><button title="Desktop (1280)" data-width='1280'><svg viewBox="0 0 412 386" height="24" width="26" class="icon"><path d="m147.6,343.9c-4.5,15.9-26.2,37.6-42.1,42.1h201c-15.3,-4-38.1,-26.8-42.1,-42.1H147.6zM387,0.5H25c-13.8,0-25,11.2-25,25V294c0,13.8 11.2,25 25,25h362c13.8,0 25,-11.2 25,-25V25.5C412,11.7 400.8,0.5 387,0.5zM369.9,238.2H42.1L42.1,42.6 369.9,42.6V238.2z"></path></svg></button><button title="Laptop (1024)" data-width='1024'><svg viewBox="0 0 384 312" height="23" width="28" class="icon"><path d="m349.2,20.5c0,-11-9,-20-20,-20H53.6c-11,0-20,9-20,20v194H349.2v-194zm-27,167H60.6V27.5H322.2v160zm28,42H32.6L2.6,282.1c-3.5,6.2-3.5,13.8 0.1,19.9 3.6,6.2 10.2,9.9 17.3,9.9H363.1c7.1,0 13.7,-3.8 17.3,-10 3.6,-6.2 3.6,-13.8 0,-20l-30.2,-52.5zm-196.9,54 8,-23.5h60.5l8,23.5h-76.5z"></path></svg></button><button title="Tablet (768)" data-width='768'><svg viewBox="0 0 317 412" height="24" width="18" class="icon"><path d="M 316.5,380 V 32 c 0,-17.7 -14.3,-32 -32,-32 H 32 C 14.3,0 0,14.3 0,32 v 348 c 0,17.7 14.3,32 32,32 h 252.5 c 17.7,0 32,-14.3 32,-32 z M 40,367 V 45 H 276.5 V 367 H 40 z m 109.8,22.7 c 0,-4.7 3.8,-8.5 8.5,-8.5 4.7,0 8.5,3.8 8.5,8.5 0,4.7 -3.8,8.5 -8.5,8.5 -4.7,0 -8.5,-3.8 -8.5,-8.5 z"></path></svg></button><button title="Smart phone (320)" data-width='320'><svg viewBox="0 0 224 412" height="24" width="13" class="icon"><path d="M 190.7,0 H 33 C 14.8,0 0,14.8 0,33 v 346 c 0,18.2 14.8,33 33,33 h 157.7 c 18.2,0 33,-14.8 33,-33 V 33 c 0,-18.2 -14.8,-33 -33,-33 z M 94.3,30.2 h 37 c 2.2,0 4,1.8 4,4 0,2.2 -1.8,4 -4,4 h -37 c -2.2,0 -4,-1.8 -4,-4 0,-2.2 1.8,-4 4,-4 z m 18.5,362.8 c -8.8,0 -16,-7.2 -16,-16 0,-8.8 7.2,-16 16,-16 8.8,0 16,7.2 16,16 0,8.8 -7.2,16 -16,16 z M 198.6,343.8 H 25.1 V 68.2 h 173.5 v 275.5 z"></path></svg></button><button title="Feature phone (240)" data-width='240'><svg viewBox="0 0 201 412" height="24" width="12" class="icon"><path d="M 165.5,0.2 V 45 H 25 c -13.8,0 -25,11.2 -25,25 V 387 c 0,13.8 11.2,25 25,25 h 150.5 c 13.8,0 25,-11.2 25,-25 V 0.2 h -35 z M 65.2,366.5 H 34.2 v -24.5 h 31 v 24.5 z m 0,-44.3 H 34.2 v -24.5 h 31 v 24.5 z m 50.5,44.3 H 84.7 v -24.5 h 31 v 24.5 z m 0,-44.3 H 84.7 v -24.5 h 31 v 24.5 z m 50.5,44.3 h -31 v -24.5 h 31 v 24.5 z m 0,-44.3 h -31 v -24.5 h 31 v 24.5 z m 0,-59.3 h -132 V 95.4 h 132 V 262.9 z"></path></svg></button><button title="Auto (100%)" data-width="auto" class="auto is-active">Auto</button></div></div><script>(function(){var a=[{title:"carousel",filename:"components/carousel",url:"components-carousel.html"},{title:"",filename:"components/carousel",url:"components-carousel.html#"},{title:"footer",filename:"components/footer",url:"components-footer.html"},{title:"",filename:"components/footer",url:"components-footer.html#"},{title:"navigation",filename:"components/navigation",url:"components-navigation.html"},{title:"",filename:"components/navigation",url:"components-navigation.html#"},{title:"settings",filename:"config/settings",url:"config-settings.html"},{title:"",filename:"config/settings",url:"config-settings.html#"},{title:"variables",filename:"config/variables",url:"config-variables.html"},{title:"",filename:"config/variables",url:"config-variables.html#"},{title:"error-msg",filename:"elements/error-msg",url:"elements-error-msg.html"},{title:"",filename:"elements/error-msg",url:"elements-error-msg.html#"},{title:"hide",filename:"elements/hide",url:"elements-hide.html"},{title:"",filename:"elements/hide",url:"elements-hide.html#"},{title:"grid",filename:"framework/grid",url:"framework-grid.html"},{title:"",filename:"framework/grid",url:"framework-grid.html#"},{title:"structure",filename:"framework/structure",url:"framework-structure.html"},{title:"",filename:"framework/structure",url:"framework-structure.html#"},{title:"layout",filename:"layout",url:"layout.html"},{title:"",filename:"layout",url:"layout.html#"},{title:"hacks",filename:"mixins/hacks",url:"mixins-hacks.html"},{title:"",filename:"mixins/hacks",url:"mixins-hacks.html#"},{title:"img-replace",filename:"mixins/img-replace",url:"mixins-img-replace.html"},{title:"",filename:"mixins/img-replace",url:"mixins-img-replace.html#"},{title:"media-queries",filename:"mixins/media-queries",url:"mixins-media-queries.html"},{title:"",filename:"mixins/media-queries",url:"mixins-media-queries.html#"},{title:"opacity",filename:"mixins/opacity",url:"mixins-opacity.html"},{title:"",filename:"mixins/opacity",url:"mixins-opacity.html#"},{title:"prefixes",filename:"mixins/prefixes",url:"mixins-prefixes.html"},{title:"",filename:"mixins/prefixes",url:"mixins-prefixes.html#"},{title:"retina",filename:"mixins/retina",url:"mixins-retina.html"},{title:"",filename:"mixins/retina",url:"mixins-retina.html#"},{title:"sprite",filename:"mixins/sprite",url:"mixins-sprite.html"},{title:"",filename:"mixins/sprite",url:"mixins-sprite.html#"},{title:"nomq",filename:"nomq",url:"nomq.html"},{title:"",filename:"nomq",url:"nomq.html#"}];(function(){"use strict";var b=function(a,b){return Array.prototype.indexOf.call(a,b)!==-1},c=function(a,b){return Array.prototype.filter.call(a,b)},d=function(a,b){return Array.prototype.forEach.call(a,b)},e=document.getElementsByTagName("body")[0];e.addEventListener("click",function(a){var b=a.target;b.tagName.toLowerCase()==="svg"&&(b=b.parentNode);var c=!1;b.dataset.toggle!=null&&(a.preventDefault(),b.classList.contains("is-active")||(c=!0)),d(e.querySelectorAll("[data-toggle]"),function(a){a.classList.remove("is-active"),document.getElementById(a.dataset.toggle).hidden=!0}),c&&(b.classList.add("is-active"),document.getElementById(b.dataset.toggle).hidden=!1)}),function(){var f=e.getElementsByClassName("nav")[0];if(!f)return;var g=document.createElement("ul");g.className="nav-results",g.id="nav-search",g.hidden=!0,d(a,function(a){var b,c,d;b=document.createElement("li"),b._title=a.title.toLowerCase(),b.hidden=!0,b.appendChild(c=document.createElement("a")),c.href=a.url,c.innerHTML=a.title,c.appendChild(d=document.createElement("span")),d.innerHTML=a.filename,d.className="nav-results-filename",g.appendChild(b)}),f.appendChild(g);var h=g.children,i=function(a){d(h,function(a){a.hidden=!0});var b=this.value.toLowerCase(),e=[];b!==""&&(e=c(h,function(a){return a._title.indexOf(b)!==-1})),e.length>0?(d(e,function(a){a.hidden=!1}),g.hidden=!1):g.hidden=!0},j=f.querySelector('input[type="search"]');j.addEventListener("keyup",i),j.addEventListener("focus",i),e.addEventListener("click",function(a){if(a.target.classList&&a.target.classList.contains("search"))return;g.hidden=!0}),g.addEventListener("click",function(a){j.value=""});var k=document.createElement("ul");k.id="nav-toc",k.hidden=!0,k.className="nav-results toc-list",c(e.getElementsByTagName("*"),function(a){return b(["h1","h2","h3"],a.tagName.toLowerCase())}).map(function(a){var b=document.createElement("li"),c=document.createElement("a"),d=a.tagName.toLowerCase()[1];c.classList.add("level-"+d),b.appendChild(c),c.href="#"+a.id,c.innerHTML=a.innerHTML,k.appendChild(b)}),f.appendChild(k)}()})(),function(){"use strict";if(location.hash==="#__preview__"||location.protocol==="data:")return;var a=function(a,b){return Array.prototype.forEach.call(a,b)},b=function(a,b){var e=Array.prototype.slice.call(arguments,2);return d(a,function(a){return(c(b)?b||a:a[b]).apply(a,e)})},c=function(a){return Object.prototype.toString.call(a)==="[object Function]"},d=function(a,b){return Array.prototype.map.call(a,b)},e=function(a,b){return d(a,function(a){return a[b]})},f=function(a){var b={},c=a.split(";");for(var d=0;c.length>d;d++){var e=c[d].trim().split("=");b[e[0]]=e[1]}return b},g=function(a,c){return b(e(a,"classList"),"remove",c)},h=function(a,b){a.contentDocument.defaultView.postMessage(b,"*")},i=document.getElementsByTagName("head")[0],j=document.getElementsByTagName("body")[0],k=e(i.querySelectorAll('style[type="text/preview"]'),"innerHTML").join(""),l=e(i.querySelectorAll('script[type="text/preview"]'),"innerHTML").join(""),m=location.href.split("#")[0]+"#__preview__",n=document.createElement("iframe");n.src="data:text/html,",j.appendChild(n),n.addEventListener("load",function(){var b={sameOriginDataUri:!1};this.contentDocument&&(b.sameOriginDataUri=!0),this.parentNode.removeChild(this),a(j.getElementsByTagName("textarea"),function(a,c){o(a,b,c),q(),p(a)})});var o=function(a,b,c){var d,e,f;d=document.createElement("div"),d.appendChild(e=document.createElement("div")),d.className="preview",e.appendChild(f=document.createElement("iframe")),e.className="resizeable",f.setAttribute("scrolling","no"),f.name="iframe"+c++,f.addEventListener("load",function(){var c,d,e,f,g,i,j;j=this.contentDocument;if(!b.sameOriginDataUri&&this.src!==m)return;this.src===m&&(c=j.createElement("html"),c.appendChild(j.createElement("head")),c.appendChild(d=j.createElement("body")),d.innerHTML=a.textContent,j.replaceChild(c,j.documentElement)),g=j.createElement("head"),g.appendChild(f=j.createElement("style")),g.appendChild(e=j.createElement("script")),e.textContent=l,f.textContent=k,i=j.getElementsByTagName("head")[0],i.parentNode.replaceChild(g,i),h(this,"getHeight")});var g;b.sameOriginDataUri?g="data:text/html;charset=utf-8,"+encodeURIComponent("<!doctype html><html><head></head></body>"+a.textContent):g=m,f.setAttribute("src",g);var i=function(){f.contentDocument.body.innerHTML=this.value,h(f,"getHeight")};a.addEventListener("keypress",i),a.addEventListener("keyup",i),a.parentNode.insertBefore(d,a)},p=function(a){var b=document.createElement("div");b.className="preview-code",b.style.position="absolute",b.style.left="-9999px",j.appendChild(b);var c=parseInt(window.getComputedStyle(a).getPropertyValue("max-height"),10),d=function(a){b.textContent=this.value+"\n";var d=b.offsetHeight+2;d>=c?this.style.overflow="auto":this.style.overflow="hidden",this.style.height=b.offsetHeight+2+"px"};a.addEventListener("keypress",d),a.addEventListener("keyup",d),d.call(a)},q=function(){var b=j.getElementsByClassName("settings")[0],c=j.getElementsByClassName("resizeable"),d=30,e=function(b){document.cookie="preview-width="+b,a(c,function(a){b==="auto"&&(b=a.parentNode.offsetWidth),a.style.width=b+"px",h(a.getElementsByTagName("iframe")[0],"getHeight")})},i=f(document.cookie)["preview-width"];if(i){e(i),g(b.getElementsByClassName("is-active"),"is-active");var k=b.querySelector('button[data-width="'+i+'"]');k&&k.classList.add("is-active")}window.addEventListener("message",function(a){if(a.data==null||!a.source)return;var b=a.data,c=document.getElementsByName(a.source.name)[0];b.height!=null&&c&&(c.parentNode.style.height=b.height+d+"px")},!1),b&&c.length>0&&(b.hidden=!1,b.addEventListener("click",function(a){var c=a.target.tagName.toLowerCase(),d;if(c==="button")d=a.target;else{if(c!=="svg")return;d=a.target.parentNode}a.preventDefault(),g(b.getElementsByClassName("is-active"),"is-active"),d.classList.add("is-active");var f=d.dataset.width;e(f)}))}}()})()</script></body></html><!-- Generated with StyleDocco (http://jacobrask.github.com/styledocco). -->

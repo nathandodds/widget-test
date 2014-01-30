@@ -1,0 +1,46 @@
+/*
+
+MIXIN = PREFIXES
+----------------
+
+This mixin will include all the prefixes that are used when we build our sites. This will increase development 
+and will stop us duplicating the same code all the time aswell. prefixes are the -webkit-, -moz- that are used
+before our property.
+
+The types of properties that are using this mixin are:
+
+- box-sizing
+- border-radius
+- box-shadow
+- transition
+*/
+
+// box-sizing
+@mixin box-sizing($box-model) {
+	-webkit-box-sizing: $box-model;
+	 -moz-box-sizing: $box-model;
+	      box-sizing: $box-model;
+}
+
+// border-radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+		 -moz-border-radius: $radius;
+			  border-radius: $radius;
+}
+
+// box-shadow
+@mixin box-shadow ($shadow) {
+	-webkit-box-shadow: $shadow;
+	   -moz-box-shadow: $shadow;
+	        box-shadow: $shadow;
+}
+
+// transition
+@mixin transition ($transition: all 0.2s ease-in-out) {
+	-webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
