@@ -1,3 +1,7 @@
+<!--WIDGET PRACTICE
+
+	EASTWOOD SCHOOLS WIDGET-->
+
 <aside class="aside">
 	<h2 class="aside__title aside__news--header">What's new</h2>
 	<ul class="aside__news">
@@ -57,6 +61,7 @@
 </aside>
 
 <!--COSMOS WIDGETS-->
+
 <ul class="grid cosmos-widget">
 	<li class="grid__standard-doors">
 		<a href="#" class="cosmos-widget__link cosmos-widget-top">
@@ -117,3 +122,85 @@
 		</a>
 	</li>
 </ul>
+
+<!--MONEY REPUBLIC WIDGET-->
+
+<section class="money-container">
+	<div class="money-text_top">
+		<h2>Tell your friends about our handy tools for all your money needs.</h2>
+		<p><a href="#">Share</a>the MoneyRepublic.com budget calculator on your social network.</p>
+	</div>
+	<div class="money-opitons">
+		<ul class="money-list grid">
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/currency-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2>Currency Calculator</h2>
+							<p>Prepare for your holidays with our currency converter and holiday weather forecast.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/mortgage-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2>Mortgage calculator</h2>
+							<p>Our mortgage calculator can help you with buying, selling or re-mortgaging a house.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/saving-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2>Money saving offers</h2>
+							<p>Every day we search the web to bring you the best money-saving offers around.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/short-loan-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2>Short-term loan comparisons</h2>
+							<p>Find the latest short term loan rates online today.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/credit-check-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2><span class="free-check">Free credit check</span></h2>
+							<p>View your credit status at a glance with our free-for-life credit check.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+			<li class="grid__half money-block">
+				<div class="money-content_container">
+					<a href="#" class="money-link">
+						<img src="<?php echo DIRECTORY; ?>assets/images/budget-image.png" class="money-image">
+						<div class="money-block_content">
+							<h2>Budget calculator</h2>
+							<p>Our budget calculator shows what you’re spending your money on and where you can save.</p>
+						</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="money-logo-block">
+		<a href= "#" class="money-logo">money republic</a>
+	</div>
+</section>
