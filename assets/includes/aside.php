@@ -82,17 +82,17 @@
 				<span class="cosmos-widget__lower-image delivery-image"></span>		
 				<h2>Free Delivery</h2>
 				<p>UKSlidingWardrobes offers free delivery on all orders to anywhere in the UK.</p>
-				<p href="#" class="cosmos-widget__text-link">Find out more about delivery</p>
+				<p href="#" class="cosmos-widget__text-link">Find out more about delivery ></p>
 			</div>
 		</a>
 	</li>
 	<li class="grid__quarter">
 		<a href="#" class="cosmos-widget__link">
 			<div class="cosmos-widget__content">
-				<span class="cosmos-widget__lower-image brochures-image"></span>						
+				<span class="cosmos-widget__lower-image"><img src="<?php echo DIRECTORY; ?>assets/images/retina/brochure-image_2x.png" class="brochures-image"></span>
 				<h2>Our brochures</h2>
 				<p>Check out our sliding door brochures for information on our entire range.</p>
-				<p href="#" class="cosmos-widget__text-link">Download Brochures</p>
+				<p href="#" class="cosmos-widget__text-link">Download Brochures ></p>
 			</div>
 		</a>
 	</li>
@@ -102,7 +102,7 @@
 				<span class="cosmos-widget__lower-image guides-image"></span>								
 				<h2>How to guides</h2>
 				<p>Find out the correct way to measure and install your sliding wardrobe doors.</p>
-				<p class="cosmos-widget__text-link">view our guides</p>
+				<p class="cosmos-widget__text-link">view our guides ></p>
 			</div>
 		</a>
 	</li>
@@ -112,7 +112,7 @@
 				<span class="cosmos-widget__lower-image sale-image"></span>		
 				<h2>30% off all doors</h2>
 				<p>Offer applies across our entire sliding door range while stocks last.</p>
-				<p href="#" class="cosmos-widget__text-link">view our offers</p>
+				<p href="#" class="cosmos-widget__text-link">view our offers ></p>
 			</div>
 		</a>
 	</li>

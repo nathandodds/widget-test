@@ -196,11 +196,13 @@ COSMOS WIDGET STYLING
 		color: #34313A;
 		font-size: 18px;
 		text-transform: uppercase;
+		margin-bottom: 7px;
 	}
 
 	p {
 		color: #34313A;
 		font-size: 14px;
+		margin: 0 0 30px 0;
 	}
 }
 
@@ -223,12 +225,6 @@ COSMOS WIDGET STYLING
 		}
 	}
 
-.wardrobe-builder {
-	background: #EA5D4E;
-	color: #FFF;
-	padding: 0.5em;
-}
-
 .grid__standard-doors {
 	width: 41.453428725%;
 
@@ -244,18 +240,29 @@ COSMOS WIDGET STYLING
 .cosmos-widget__top {
 	border: 2px solid #C8D1C9;
 	padding-left: 87px;
+	height: 177.875px;
+
+	h2 {
+		margin-bottom: 6px;
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 11px;
+	}
 }
 
 .standard-doors-image,
 .made-to-measure-image {
+	position: relative;
+
 	&:before {
 		content: '';
 		display: block;
 		height: 60px;
-		left: 45%;
-		margin-left: -36px;
+		left: 16px;
 		position: absolute;
-		top: 54px;
+		top: 16px;
 		width: 45px;
 		z-index: 1;
 	}
@@ -265,11 +272,37 @@ COSMOS WIDGET STYLING
 	&:before {
 		@include sprite(0 0);
 	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include sprite(-51px 0)
+		}
+	}
 }
 
 .made-to-measure-image {
 	&:before {
-		@include sprite(102px 0);
+		@include sprite(-102px 0);
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include sprite(-150px 0)
+		}
+	}
+}
+
+.wardrobe-builder {
+	@include sprite (-125px -224px);
+	height: 46px;
+	width: 244px;
+	top: 50%;
+	padding: 14px 0 0 9px;
+	
+	p {
+		color: #fff;
 	}
 }
 
@@ -277,6 +310,76 @@ COSMOS WIDGET STYLING
 .cosmos-widget__lower-image {
 	border: solid 2px #7B898A;
 	display: block;
+	height: 221px;
+	position: relative;
+	line-height: 221px;
+	text-align: center;
+
+	&:before {
+		content: '';
+		left: 50%;
+		position: absolute;
+		top: 50%;
+	}
+}
+
+.delivery-image {
+	&:before {
+		height: 84px;
+		margin-left: -52px;
+		margin-top: -42px;
+		width: 103px;
+		@include sprite (-200px 0);
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include sprite(-312px 0)
+		}
+	}
+}
+
+.brochures-image img {
+	line-height: normal;
+	display: inline-block;
+	height: 171px;
+	width: 202px;
+	vertical-align: middle;
+}
+
+.guides-image{
+	&:before {
+		margin-left: -57px;
+		margin-top: -52px;
+		height: 104px;
+		width: 114px;
+		@include sprite (0 -68px);
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include sprite(0 -179px)
+		}
+	}	
+}
+
+.sale-image {
+	&:before {
+		margin-left: -64px;
+		margin-top: -75px;
+		height: 120px;
+		width: 127px;
+		@include sprite (-124px -92px);
+	}
+
+	&:hover,
+	&:focus {
+		&:before {
+			@include sprite(-258px -92px)
+		}
+	}
 }
 
 

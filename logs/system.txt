@@ -69,3 +69,10 @@
 30-01-2014 11:09:15 Core/Routing/Router: Threw exception: Could not find controller "larc" to load
 30-01-2014 11:09:15 Core/Routing/Router: Threw exception: Could not find controller "larc" to load
 30-01-2014 13:31:30 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:07:44 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:07:45 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:07:46 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:09:20 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:10:52 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:11:51 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+31-01-2014 11:12:20 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
