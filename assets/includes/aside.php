@@ -59,7 +59,7 @@
 <!--COSMOS WIDGETS-->
 <ul class="grid cosmos-widget">
 	<li class="grid__standard-doors">
-		<a href="#" class="cosmos-widget__link">
+		<a href="#" class="cosmos-widget__link cosmos-widget-top">
 			<div class="cosmos-widget__content cosmos-widget__top standard-doors-image">
 				<h2>Buy standard doors online</h2>
 				<p>Don’t forget, we also have an extensive range of standard-sized sliding doors for you to choose from ­– all made in Britain and all at the most competitive prices.</p>
@@ -68,11 +68,11 @@
 		</a>
 	</li>
 	<li class="grid__made-to-measure">
-		<a href="#" class="cosmos-widget__link">
+		<a href="#" class="cosmos-widget__link cosmos-widget-top">
 			<div class="cosmos-widget__content cosmos-widget__top made-to-measure-image">		
 				<h2>Made-to-measure wardrobe builder</h2>
 				<p>Get creative and design your ideal made-to-measure wardrobe with our wardrobe builder. Everything is customizable – from the size and style, right down to the finish of the frame.</p>
-				<p href="#" class="wardrobe-builder cosmos-widget__text-link">Launch wardrobe builder</p>
+				<p class="wardrobe-builder cosmos-widget__text-link">Launch wardrobe builder</p>
 			</div>
 		</a>
 	</li>

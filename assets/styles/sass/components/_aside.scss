@@ -173,21 +173,47 @@ a,
 	margin: 15px 10px 0 0;
 }
 
-/*
+/****************
 
 COSMOS WIDGET STYLING
 ----------------------
-*/
+***************/
 
 .cosmos-widget {
 	float: right;
 	width: 976px;
 	padding: 0;
 	list-style: none;
-	
+}
 
-	a {
-		text-decoration: none;
+.cosmos-widget__link {
+	text-decoration: none;
+	display: block;
+	padding: 0;
+
+	&:hover,
+	&:focus {
+		.cosmos-widget__text-link {
+			text-decoration: underline;
+		}
+
+		.delivery-image {
+			&:before{
+				@include sprite(-312px 0);
+			}
+		}
+
+		.guides-image {
+			&:before {
+			@include sprite(0 -179px)
+			}		
+		}
+
+		.sale-image {
+			&:before {
+			@include sprite(-258px -92px)
+			}
+		}	
 	}
 }
 
@@ -204,26 +230,30 @@ COSMOS WIDGET STYLING
 		font-size: 14px;
 		margin: 0 0 30px 0;
 	}
+
+	.wardrobe-builder {
+		color: #fff;
+		@include sprite (-125px -224px);
+		height: 46px;
+		width: 244px;
+		top: 50%;
+		padding: 14px 0 0 9px;
+	}
 }
 
-	h2,
-	p,
-	a {
-		text-align: left;
-	}
+h2,
+p,
+a {
+	text-align: left;
+}
 
 .cosmos-widget__text-link {
-		color: #34313A;
-		font-size: 12px;
-		font-weight: bold;
-		text-transform: uppercase;
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
+	color: #34313A;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 
 .grid__standard-doors {
 	width: 41.453428725%;
@@ -237,8 +267,13 @@ COSMOS WIDGET STYLING
 
 /*TOP WIDGETS STYLING*/
 
-.cosmos-widget__top {
+.cosmos-widget-top {
 	border: 2px solid #C8D1C9;
+	margin-bottom: 20px;
+}
+
+.cosmos-widget__top {
+	border: 6px solid #F1F2F2;
 	padding-left: 87px;
 	height: 177.875px;
 
@@ -248,7 +283,8 @@ COSMOS WIDGET STYLING
 
 	p {
 		margin-top: 0;
-		margin-bottom: 11px;
+		margin-bottom: 9px;
+		padding-right: 28px;
 	}
 }
 
@@ -294,17 +330,6 @@ COSMOS WIDGET STYLING
 	}
 }
 
-.wardrobe-builder {
-	@include sprite (-125px -224px);
-	height: 46px;
-	width: 244px;
-	top: 50%;
-	padding: 14px 0 0 9px;
-	
-	p {
-		color: #fff;
-	}
-}
 
 /*LOWER WIDGETS STYLING*/
 .cosmos-widget__lower-image {
@@ -331,16 +356,10 @@ COSMOS WIDGET STYLING
 		width: 103px;
 		@include sprite (-200px 0);
 	}
-
-	&:hover,
-	&:focus {
-		&:before {
-			@include sprite(-312px 0)
-		}
-	}
 }
 
-.brochures-image img {
+.brochures-image {
+	border: none;
 	line-height: normal;
 	display: inline-block;
 	height: 171px;
@@ -348,7 +367,7 @@ COSMOS WIDGET STYLING
 	vertical-align: middle;
 }
 
-.guides-image{
+.guides-image {
 	&:before {
 		margin-left: -57px;
 		margin-top: -52px;
@@ -356,13 +375,6 @@ COSMOS WIDGET STYLING
 		width: 114px;
 		@include sprite (0 -68px);
 	}
-
-	&:hover,
-	&:focus {
-		&:before {
-			@include sprite(0 -179px)
-		}
-	}	
 }
 
 .sale-image {
@@ -372,13 +384,6 @@ COSMOS WIDGET STYLING
 		height: 120px;
 		width: 127px;
 		@include sprite (-124px -92px);
-	}
-
-	&:hover,
-	&:focus {
-		&:before {
-			@include sprite(-258px -92px)
-		}
 	}
 }
 
